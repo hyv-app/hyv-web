@@ -1,8 +1,8 @@
+import TopBar from "@/components/TopBar";
+
 const Home = () => {
   return (
-    <div>
-      <div className="text-xl">hyv</div>
-    </div>
+    <TopBar />
   )
 }
 
