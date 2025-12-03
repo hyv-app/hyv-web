@@ -12,7 +12,7 @@ const TopBar = () => {
             </div>
             {/* Login button */}
             <div>
-                <Button className="uppercase">Login</Button>
+                <Button className="rounded-full uppercase">Login</Button>
             </div>
         </div>
     )

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import { IBM_Plex_Sans } from "next/font/google";
 import { APP_DESCRIPTION, APP_NAME } from "@/constants/common";
 
-const ibmPlexSans = IBM_Plex_Sans({
+const inter = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
+  variable: "--font-ibm-plex-sans",
+  weight: ["200", "300", "400"]
 });
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,300,400,500,600,700&display=swap" rel="stylesheet" />
         <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
         <link rel="shortcut icon" href="/favicons/favicon.ico" />
@@ -29,9 +31,9 @@ export default function RootLayout({
         <link rel="manifest" href="/favicons/site.webmanifest" />
       </head>
       <body
-        className={`${ibmPlexSans.className} antialiased p-6`}
+        className={`${inter.variable} antialiased p-4 lg:p-6`}
       >
-        {children}
+        <div className="flex flex-col min-h-screen gap-12">{children}</div>
       </body>
     </html>
   );
