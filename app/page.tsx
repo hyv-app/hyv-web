@@ -1,4 +1,4 @@
-import TopBar from "@/components/TopBar";
+import TopBar from "@/components/common/TopBar";
 import { Separator } from "@/components/ui/separator";
 
 const Home = () => {
