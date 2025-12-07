@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { IBM_Plex_Sans } from "next/font/google";
 import { APP_DESCRIPTION, APP_NAME } from "@/constants/common";
+import TopBar from "@/components/common/TopBar";
 
-const inter = IBM_Plex_Sans({
+const ibm_plex_sans = IBM_Plex_Sans({
   subsets: ["latin"],
   variable: "--font-ibm-plex-sans",
-  weight: ["200", "300", "400"]
+  weight: ["400", "500", "600", "700"]
 });
 
 export const metadata: Metadata = {
@@ -14,11 +15,7 @@ export const metadata: Metadata = {
   description: APP_DESCRIPTION,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en">
       <head>
@@ -31,10 +28,15 @@ export default function RootLayout({
         <link rel="manifest" href="/favicons/site.webmanifest" />
       </head>
       <body
-        className={`${inter.variable} antialiased p-4 lg:p-6`}
+        className={`${ibm_plex_sans.variable} antialiased max-w-[1440px] mx-auto`}
       >
-        <div className="flex flex-col min-h-screen gap-12">{children}</div>
+        <div className="flex flex-col min-h-dvh gap-12 p-4 lg:p-6">
+          <TopBar />
+          {children}
+        </div>
       </body>
     </html>
   );
 }
+
+export default RootLayout;

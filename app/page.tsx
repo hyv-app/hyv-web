@@ -1,10 +1,8 @@
-import TopBar from "@/components/common/TopBar";
 import { Separator } from "@/components/ui/separator";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
-      <TopBar />
       {/* Example card */}
       <div className="bg-card flex flex-col gap-4 shadow-lg rounded-xl p-6 max-w-xl border border-lime-400">
         <div className="text-2xl lg:text-3xl font-medium">Example Title</div>
@@ -17,4 +15,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default HomePage;
