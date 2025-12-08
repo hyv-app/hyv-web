@@ -10,13 +10,13 @@ const AboutPage = () => {
         <>
             {/* Hero Section */}
             <section className="space-y-4">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl 2xl:text-6xl font-medium tracking-tight">
+                <h1 className="text-3xl/[1.1] sm:text-4xl/[1.1] md:text-5xl/[1.1] font-medium tracking-tight">
                     An AI-first utility platform
                     <br />
                     <span className="text-muted-foreground">for everything around you</span>
                 </h1>
-                <p className="text-lg 2xl:text-xl text-muted-foreground max-w-2xl">
-                    Hyv consolidates fragmented platforms into a single, trusted ecosystem powered by Artificial Intelligence and hyper-local data.
+                <p className="text-lg/relaxed md:text-xl/relaxed text-muted-foreground max-w-2xl">
+                    {APP_NAME} consolidates fragmented platforms into a single, trusted ecosystem powered by Artificial Intelligence and hyper-local data.
                 </p>
             </section>
 
@@ -28,8 +28,8 @@ const AboutPage = () => {
                 </div>
                 <p className="leading-loose text-muted-foreground max-w-2xl font-secondary">
                     Our primary interface is an AI Utility Chatbot that understands natural language queries.
-                    Instead of manual search, simply ask: <span className="text-foreground">{`"Find me a verified roommate
-                        near Whitefield who is vegetarian and has a budget of 25k"`}</span>
+                    Instead of manual search, simply ask: <span className="text-foreground">{`"Find me roommates
+                        near Whitefield who are vegetarian and has a budget of 25k"`}</span>
                 </p>
             </section>
 
@@ -65,7 +65,7 @@ const AboutPage = () => {
             <section className="space-y-6">
                 <div className="flex items-center gap-2">
                     <div className="h-1 w-12 bg-lime-400 rounded-full" />
-                    <h2 className="text-2xl 2xl:text-3xl font-semibold">Why Hyv</h2>
+                    <h2 className="text-2xl 2xl:text-3xl font-semibold">Why {APP_NAME}</h2>
                 </div>
                 <div className="space-y-6 font-secondary">
                     <div>
