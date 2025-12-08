@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Custom breakpoints */
+@theme {
+  --breakpoint-xs: 30rem;
+}
+
 @theme inline {
   --font-secondary: var(--font-ibm-plex-sans);
   --color-background: var(--background);

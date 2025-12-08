@@ -18,13 +18,7 @@ const TopBar = () => {
             </Link>
             {/* Login button */}
             <div className="flex items-center gap-2">
-                {pathname === "/about" ? (
-                    <Link href="/">
-                        <Button variant="outline" className="rounded-full">
-                            Explore hyv
-                        </Button>
-                    </Link>
-                ) : (
+                {pathname === "/" && (
                     <Link href="/about">
                         <Button variant="outline" className="rounded-full">
                             {`What's hyv?`}
