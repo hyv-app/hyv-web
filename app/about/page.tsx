@@ -20,20 +20,20 @@ const AboutPage = () => {
             {/* AI-First Interface */}
             <section className="space-y-4">
                 <div className="flex items-center gap-2">
-                    <div className="h-1 w-12 bg-lime-400 rounded-full" />
+                    <div className="h-1 w-10 bg-lime-400 rounded-full" />
                     <div className="text-2xl 2xl:text-3xl font-semibold">AI-First Interface</div>
                 </div>
                 <div className="leading-loose max-w-2xl font-secondary">
                     Our primary interface is an AI Utility Chatbot that understands natural language queries.
                     Instead of manual search, simply ask: <span className="font-semibold italic">{`"Find me roommates
-                        near Whitefield who are vegetarian and has a budget of 25k"`}</span>
+                        near Whitefield who are vegetarian and have a budget of 25k"`}</span>
                 </div>
             </section>
 
             {/* Core Features */}
             <section className="space-y-6">
                 <div className="flex items-center gap-2">
-                    <div className="h-1 w-12 bg-lime-400 rounded-full" />
+                    <div className="h-1 w-10 bg-lime-400 rounded-full" />
                     <div className="text-2xl 2xl:text-3xl font-semibold">Core Utilities</div>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 font-secondary">
@@ -61,7 +61,7 @@ const AboutPage = () => {
             {/* Key Differentiators */}
             <section className="space-y-6">
                 <div className="flex items-center gap-2">
-                    <div className="h-1 w-12 bg-lime-400 rounded-full" />
+                    <div className="h-1 w-10 bg-lime-400 rounded-full" />
                     <div className="text-2xl 2xl:text-3xl font-semibold">Why {APP_NAME}</div>
                 </div>
                 <div className="space-y-6 font-secondary">
