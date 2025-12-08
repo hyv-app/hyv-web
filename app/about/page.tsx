@@ -37,19 +37,19 @@ const AboutPage = () => {
                     <div className="text-2xl 2xl:text-3xl font-semibold">Core Utilities</div>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 font-secondary">
-                    <div className="space-y-2 p-4 rounded-lg border border-cyan-400 bg-cyan-50/50 shadow-lg">
+                    <div className="space-y-2 p-4 rounded-xl border border-cyan-400 bg-cyan-50/50 shadow-lg">
                         <div className="2xl:text-lg font-semibold italic">Roommate Finder</div>
                         <div className="leading-loose">
                             AI-powered matching based on budget, location, lifestyle preferences, and interests.
                         </div>
                     </div>
-                    <div className="space-y-2 p-4 rounded-lg border border-cyan-400 bg-cyan-50/50 shadow-lg">
+                    <div className="space-y-2 p-4 rounded-xl border border-cyan-400 bg-cyan-50/50 shadow-lg">
                         <div className="2xl:text-lg font-semibold italic">Marketplace</div>
                         <div className="leading-loose">
                             Buy and sell with trust. Verified listings prioritized, automated scam detection.
                         </div>
                     </div>
-                    <div className="space-y-2 p-4 rounded-lg border border-cyan-400 bg-cyan-50/50 shadow-lg">
+                    <div className="space-y-2 p-4 rounded-xl border border-cyan-400 bg-cyan-50/50 shadow-lg">
                         <div className="2xl:text-lg font-semibold italic">Activity Discovery</div>
                         <div className="leading-loose">
                             Discover local activities and communities within your radius. Create or join groups.
