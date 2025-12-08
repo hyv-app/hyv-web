@@ -6,6 +6,7 @@ import TopBar from "@/components/common/TopBar";
 
 const ibm_plex_sans = IBM_Plex_Sans({
   subsets: ["latin"],
+  style: ["normal", "italic"],
   variable: "--font-ibm-plex-sans",
   weight: ["400", "500", "600", "700"]
 });
