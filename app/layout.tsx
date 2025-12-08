@@ -23,7 +23,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,300,400,500,600,700&display=swap" rel="stylesheet" />
         <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
-        <link rel="shortcut icon" href="/favicons/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="hyv" />
         <link rel="manifest" href="/favicons/site.webmanifest" />
