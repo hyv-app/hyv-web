@@ -20,8 +20,8 @@ const HomePage = () => {
       <div className="relative w-[calc(100vw-2rem)] max-w-2xl self-center">
         <div className="absolute inset-0 -z-10 blur-lg bg-linear-to-br from-violet-200 via-cyan-200 to-lime-200" />
         <Input
-          placeholder="Ask anything..."
-          className="p-6 font-secondary bg-background rounded-full focus-visible:ring-offset-0 focus-visible:ring-0 shadow-none"
+          placeholder="Search for anything around you..."
+          className="p-6 font-secondary bg-background rounded-full shadow-none"
         />
       </div>
 

@@ -26,7 +26,7 @@ const TopBar = () => {
                 {pathname === "/" && (
                     <Link href="/about" tabIndex={-1}>
                         <Button variant="outline" className="rounded-full">
-                            {`What's hyv?`}
+                            {`What's ${APP_NAME}?`}
                         </Button>
                     </Link>
                 )}
