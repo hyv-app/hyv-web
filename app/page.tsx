@@ -16,6 +16,14 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* Input */}
+      <div className="p-px rounded-full w-[calc(100vw-2rem)] max-w-2xl self-center bottom-4 lg:bottom-6 bg-linear-to-r from-violet-400 via-cyan-400 to-lime-400">
+        <Input
+          placeholder="Ask anything..."
+          className="p-6 font-secondary w-full border-none focus-visible:ring-offset-0 focus-visible:ring-0"
+        />
+      </div>
+
       {/* Example card */}
       <div className="bg-card flex flex-col gap-4 shadow-lg rounded-xl p-6 max-w-xl border">
         <div className="text-2xl lg:text-3xl font-medium">Example Title</div>
@@ -25,12 +33,6 @@ const HomePage = () => {
       </div>
 
       <div className="h-dvh bg-neutral-100 flex items-center justify-center rounded-xl">Sample content</div>
-
-      {/* Floating Input */}
-      <Input
-        placeholder="Ask anything..."
-        className="shadow-xl p-6 font-secondary max-w-xl self-center sticky bottom-8 border-violet-400"
-      />
     </>
   );
 };
