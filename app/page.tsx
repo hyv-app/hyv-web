@@ -47,7 +47,7 @@ const HomePage = () => {
           <span className="font-medium bg-linear-to-br from-violet-200 via-cyan-200 to-lime-200">Rooms</span> for you
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-          <div className="bg-card flex flex-col gap-4 shadow-lg rounded-xl p-6 border">
+          <div className="bg-card flex flex-col gap-4 shadow-lg rounded-xl p-6 border border-violet-400">
             <div className="text-2xl font-medium">Example Title</div>
             <div className="font-secondary leading-9 line-clamp-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
@@ -58,7 +58,7 @@ const HomePage = () => {
               incididunt ut labore et dolore magna aliqua.
             </div>
           </div>
-          <div className="bg-card flex flex-col gap-4 shadow-lg rounded-xl p-6 border">
+          <div className="bg-card flex flex-col gap-4 shadow-lg rounded-xl p-6 border border-violet-400">
             <div className="text-2xl font-medium">Example Title</div>
             <div className="font-secondary leading-9 line-clamp-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
@@ -69,7 +69,7 @@ const HomePage = () => {
               incididunt ut labore et dolore magna aliqua.
             </div>
           </div>
-          <div className="bg-card flex flex-col gap-4 shadow-lg rounded-xl p-6 border">
+          <div className="bg-card flex flex-col gap-4 shadow-lg rounded-xl p-6 border border-violet-400">
             <div className="text-2xl font-medium">Example Title</div>
             <div className="font-secondary leading-9 line-clamp-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
