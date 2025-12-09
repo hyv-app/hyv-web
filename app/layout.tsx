@@ -28,7 +28,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <link rel="manifest" href="/favicons/site.webmanifest" />
       </head>
       <body
-        className={`${ibm_plex_sans.variable} antialiased max-w-[1440px] mx-auto `}
+        className={`${ibm_plex_sans.variable} antialiased max-w-[1440px] mx-auto selection:bg-lime-400`}
       >
         <div className="flex flex-col min-h-dvh gap-12 md:gap-16 p-4 lg:p-6">
           <TopBar />

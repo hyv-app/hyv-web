@@ -25,8 +25,7 @@ const AboutPage = () => {
                 </div>
                 <div className="leading-loose max-w-2xl font-secondary">
                     Our primary interface is an AI Utility Chatbot that understands natural language queries.
-                    Instead of manual search, simply ask: <span className="font-semibold italic">{`"Find me roommates
-                        near Whitefield who are vegetarian and have a budget of 25k"`}</span>
+                    Instead of manual search, simply ask: <span className="font-semibold italic">{`"Roommates near Whitefield who are vegetarian and have a budget of 25k"`}</span>
                 </div>
             </section>
 

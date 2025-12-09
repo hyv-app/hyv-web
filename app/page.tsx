@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -19,15 +21,24 @@ const HomePage = () => {
       {/* Glow Input */}
       <div className="relative w-[calc(100vw-2rem)] max-w-2xl self-center">
         <div className="absolute inset-0 -z-10 blur-lg bg-linear-to-br from-violet-200 via-cyan-200 to-lime-200" />
-        <Input
-          placeholder="Search for anything around you..."
-          className="p-6 font-secondary bg-background rounded-full shadow-none"
-        />
+        <form className="flex items-center justify-center gap-2">
+          <Input
+            placeholder="Find anything around you..."
+            className="font-secondary bg-background rounded-full h-12 px-6"
+          />
+          <Button
+            type="submit"
+            className="size-12 rounded-full"
+            variant="outline"
+          >
+            <Search className="size-5" />
+          </Button>
+        </form>
       </div>
 
       {/* Example card */}
       <div className="bg-card flex flex-col gap-4 shadow-lg rounded-xl p-6 max-w-xl border border-violet-400">
-        <div className="text-2xl lg:text-3xl font-medium">Example Title</div>
+        <div className="text-2xl font-medium">Example Title</div>
         <div className="font-secondary leading-9 line-clamp-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
