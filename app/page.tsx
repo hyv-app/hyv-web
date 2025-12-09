@@ -21,7 +21,7 @@ const HomePage = () => {
       {/* Glow Input */}
       <div className="relative w-[calc(100vw-2rem)] max-w-2xl self-center my-2 md:my-0">
         <div className="absolute inset-0 -z-10 blur-lg bg-linear-to-br from-violet-200 via-cyan-200 to-lime-200" />
-        <form className="flex items-center justify-center gap-1.5">
+        <form className="flex items-center justify-center gap-2">
           <Input
             placeholder="Find anything around you..."
             className="font-secondary bg-background rounded-full h-12 px-6"
