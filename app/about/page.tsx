@@ -21,7 +21,7 @@ const AboutPage = () => {
             <section className="space-y-8">
                 <div className="flex items-center gap-2">
                     <div className="h-1 w-10 bg-lime-400 rounded-full" />
-                    <div className="text-2xl 2xl:text-3xl font-semibold">AI-First Interface</div>
+                    <div className="text-2xl font-semibold">AI-First Interface</div>
                 </div>
                 <div className="leading-loose max-w-2xl font-secondary" style={{
                     textBox: "trim-both cap alphabetic"
@@ -35,25 +35,25 @@ const AboutPage = () => {
             <section className="space-y-8">
                 <div className="flex items-center gap-2">
                     <div className="h-1 w-10 bg-lime-400 rounded-full" />
-                    <div className="text-2xl 2xl:text-3xl font-semibold">Core Utilities</div>
+                    <div className="text-2xl font-semibold">Core Utilities</div>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 font-secondary" style={{
                     textBox: "trim-both cap alphabetic"
                 }}>
                     <div className="space-y-2 p-4 rounded-xl border border-cyan-400 bg-cyan-50/50 shadow-lg">
-                        <div className="2xl:text-lg font-semibold italic">Roommate Finder</div>
+                        <div className="font-semibold italic">Roommate Finder</div>
                         <div className="leading-loose">
                             AI-powered matching based on budget, location, lifestyle preferences, and interests.
                         </div>
                     </div>
                     <div className="space-y-2 p-4 rounded-xl border border-cyan-400 bg-cyan-50/50 shadow-lg">
-                        <div className="2xl:text-lg font-semibold italic">Marketplace</div>
+                        <div className="font-semibold italic">Marketplace</div>
                         <div className="leading-loose">
                             Buy and sell with trust. Verified listings prioritized, automated scam detection.
                         </div>
                     </div>
                     <div className="space-y-2 p-4 rounded-xl border border-cyan-400 bg-cyan-50/50 shadow-lg">
-                        <div className="2xl:text-lg font-semibold italic">Activity Discovery</div>
+                        <div className="font-semibold italic">Activity Discovery</div>
                         <div className="leading-loose">
                             Discover local activities and communities within your radius. Create or join groups.
                         </div>
@@ -65,7 +65,7 @@ const AboutPage = () => {
             <section className="space-y-8">
                 <div className="flex items-center gap-2">
                     <div className="h-1 w-10 bg-lime-400 rounded-full" />
-                    <div className="text-2xl 2xl:text-3xl font-semibold">Why {APP_NAME}</div>
+                    <div className="text-2xl font-semibold">Why {APP_NAME}</div>
                 </div>
                 <div className="space-y-6 font-secondary max-w-2xl" style={{
                     textBox: "trim-both cap alphabetic"
