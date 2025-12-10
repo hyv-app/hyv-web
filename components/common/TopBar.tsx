@@ -17,11 +17,11 @@ const TopBar = () => {
                 <Image src="/logo.svg" alt={`${APP_NAME} logo`} width={32} height={32} />
                 <div className="hidden md:block text-xl">{APP_NAME}</div>
             </Link>
-            {/* Login button */}
+            {/* Right side */}
             <div className="flex items-center gap-2">
                 <Button className="hidden sm:flex bg-orange-50 text-orange-600 rounded-full hover:bg-orange-600 hover:text-white gap-1">
                     <Zap className="size-4" />
-                    <span>50</span>
+                    <span>Get PRO</span>
                 </Button>
                 {pathname === "/" && (
                     <Link href="/about" tabIndex={-1}>
