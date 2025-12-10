@@ -36,7 +36,7 @@ const HomePage = () => {
         </form>
       </div>
 
-      {/* Rooms for you */}
+      {/* Activities */}
       <div className="flex flex-col gap-6">
         <div
           className="text-xl/[1.2] xs:text-2xl/[1.2] tracking-tight w-fit"
@@ -44,7 +44,7 @@ const HomePage = () => {
             textBox: "trim-both cap alphabetic",
           }}
         >
-          <span className="font-medium bg-linear-to-br from-violet-200 via-cyan-200 to-lime-200">Rooms</span> for you
+          <span className="font-medium bg-linear-to-br from-violet-100 via-cyan-100 to-lime-100">Activities</span> you might like
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           <div className="bg-card flex flex-col gap-4 shadow-lg rounded-xl p-6 border border-violet-400">
@@ -83,8 +83,18 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="h-dvh bg-neutral-100 flex items-center justify-center rounded-xl">
-        Sample content
+      <div className="flex flex-col gap-6">
+        <div
+          className="text-xl/[1.2] xs:text-2xl/[1.2] tracking-tight w-fit"
+          style={{
+            textBox: "trim-both cap alphabetic",
+          }}
+        >
+          <span className="font-medium bg-linear-to-br from-violet-100 via-cyan-100 to-lime-100">Rooms</span> for you
+        </div>
+        <div className="h-dvh bg-neutral-100 flex items-center justify-center rounded-xl">
+          Sample content
+        </div>
       </div>
     </>
   );
