@@ -18,10 +18,10 @@ const AboutPage = () => {
             </div>
 
             {/* AI-First Interface */}
-            <section className="space-y-8">
+            <section className="space-y-6">
                 <div className="flex items-center gap-2">
                     <div className="h-1 w-10 bg-lime-400 rounded-full" />
-                    <div className="text-2xl font-semibold">AI-First Interface</div>
+                    <div className="text-xl md:text-2xl font-semibold">AI-First Interface</div>
                 </div>
                 <div className="leading-loose max-w-2xl font-secondary" style={{
                     textBox: "trim-both cap alphabetic"
@@ -32,10 +32,10 @@ const AboutPage = () => {
             </section>
 
             {/* Core Features */}
-            <section className="space-y-8">
+            <section className="space-y-6">
                 <div className="flex items-center gap-2">
                     <div className="h-1 w-10 bg-lime-400 rounded-full" />
-                    <div className="text-2xl font-semibold">Core Utilities</div>
+                    <div className="text-xl md:text-2xl font-semibold">Core Utilities</div>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 font-secondary" style={{
                     textBox: "trim-both cap alphabetic"
@@ -62,10 +62,10 @@ const AboutPage = () => {
             </section>
 
             {/* Key Differentiators */}
-            <section className="space-y-8">
+            <section className="space-y-6">
                 <div className="flex items-center gap-2">
                     <div className="h-1 w-10 bg-lime-400 rounded-full" />
-                    <div className="text-2xl font-semibold">Why {APP_NAME}</div>
+                    <div className="text-xl md:text-2xl font-semibold">Why {APP_NAME}</div>
                 </div>
                 <div className="space-y-6 font-secondary max-w-2xl" style={{
                     textBox: "trim-both cap alphabetic"
