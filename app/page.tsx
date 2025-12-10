@@ -39,7 +39,7 @@ const HomePage = () => {
       {/* Activities */}
       <div className="flex flex-col gap-6">
         <div
-          className="text-xl/[1.2] xs:text-2xl/[1.2] tracking-tight w-fit"
+          className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit"
           style={{
             textBox: "trim-both cap alphabetic",
           }}
@@ -85,7 +85,7 @@ const HomePage = () => {
 
       <div className="flex flex-col gap-6">
         <div
-          className="text-xl/[1.2] xs:text-2xl/[1.2] tracking-tight w-fit"
+          className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit"
           style={{
             textBox: "trim-both cap alphabetic",
           }}
