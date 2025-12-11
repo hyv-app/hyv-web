@@ -4,17 +4,16 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { APP_NAME, TOPBAR_SCROLL_THRESHOLD, TOPBAR_SCROLL_UP_THRESHOLD } from "@/constants/common";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Zap } from "lucide-react";
+import { Bell, MapPin, Zap } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { Separator } from "../ui/separator";
 
 const TopBar = () => {
     const [isVisible, setIsVisible] = useState<boolean>(true);
     const [isAtTop, setIsAtTop] = useState<boolean>(true);
     const [lastScrollY, setLastScrollY] = useState<number>(0);
     const scrollUpDistanceRef = useRef<number>(0);
-    const pathname = usePathname();
 
     useEffect(() => {
         // Initialize with current scroll position
@@ -25,7 +24,7 @@ const TopBar = () => {
         }
 
         initializeScrollPosition();
-    
+
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
@@ -38,7 +37,7 @@ const TopBar = () => {
                 if (currentScrollY < lastScrollY) {
                     const distanceScrolledUp = lastScrollY - currentScrollY;
                     scrollUpDistanceRef.current += distanceScrolledUp;
-                    
+
                     if (scrollUpDistanceRef.current >= TOPBAR_SCROLL_UP_THRESHOLD) {
                         setIsVisible(true);
                         scrollUpDistanceRef.current = 0; // Reset after showing
@@ -75,25 +74,33 @@ const TopBar = () => {
             // Show/hide based on scroll direction (only when not at top)
             !isAtTop && !isVisible && "-translate-y-full"
         )}>
-            {/* Logo and app name */}
-            <Link href="/" className="flex items-center gap-3.5">
-                <Image src="/logo.svg" alt={`${APP_NAME} logo`} width={32} height={32} />
-                <div className="text-lg md:text-xl">{APP_NAME}</div>
-            </Link>
+            <div className="flex items-center gap-3 h-6">
+                {/* Logo and app name */}
+                <Link href="/" className="flex items-center gap-3">
+                    <Image src="/logo.svg" alt={`${APP_NAME} logo`} width={32} height={32} />
+                    <div className="text-lg md:text-xl">{APP_NAME}</div>
+                </Link>
+                <Separator orientation="vertical" />
+                <Button
+                    size="icon"
+                    className="rounded-full" // border-lime-400 hover:bg-lime-50/50
+                    variant="outline"
+                // style={{ animation: "mapPinPulse 1.4s ease-in-out infinite" }}
+                >
+                    <MapPin className="size-4" />
+                </Button>
+            </div>
+
             {/* Right side */}
             <div className="flex items-center gap-2">
                 <Button className="bg-orange-50 text-orange-600 rounded-full hover:bg-orange-600 hover:text-white gap-1">
                     <Zap className="size-4" />
                     <span>Get PRO</span>
                 </Button>
-                {pathname === "/" && (
-                    <Link href="/about" tabIndex={-1} className="hidden md:flex">
-                        <Button variant="outline" className="rounded-full">
-                            {`What's ${APP_NAME}?`}
-                        </Button>
-                    </Link>
-                )}
-                <Button className="rounded-full uppercase">Login</Button>
+                <Button size="icon" className="rounded-full border-violet-400 hover:bg-violet-50/50" variant="outline">
+                    <Bell className="size-4" />
+                </Button>
+                <Button className="hidden md:block rounded-full uppercase">Login</Button>
             </div>
         </div>
     )

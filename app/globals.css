@@ -143,3 +143,15 @@
     display: none;  /* Chrome, Safari, Opera */
   }
 }
+
+/* @keyframes mapPinPulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.06);
+  }
+  100% {
+      transform: scale(1);
+  }
+} */

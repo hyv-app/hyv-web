@@ -1,18 +1,18 @@
-"use client"
+// "use client"
 
 import { APP_NAME } from "@/constants/common";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 
 const Footer = () => {
-    const pathname = usePathname();
+    // const pathname = usePathname();
 
-    // Only show footer on the landing page or login page
-    const shouldShowFooter = pathname === "/" || pathname.includes("/login");
+    // // Only show footer on the landing page or login page
+    // const shouldShowFooter = pathname === "/" || pathname.includes("/login");
 
-    if (!shouldShowFooter) {
-        return null;
-    }
+    // if (!shouldShowFooter) {
+    //     return null;
+    // }
 
     return (
         <div className="lg:sticky z-0 bottom-0 w-full max-w-[1440px] mx-auto h-80 bg-foreground flex justify-center items-center">
@@ -25,12 +25,10 @@ const Footer = () => {
                                 Indrajit
                             </Link>
                         </li>
-
                     </ul>
                     <ul>
-                        <Link href="https://github.com/hyv-app" target="_blank">
-                            <li className="hover:underline cursor-pointer">Github</li>
-                        </Link>
+                        <li className="hover:underline cursor-pointer w-fit"><Link href="/about">{`What's ${APP_NAME}?`}</Link></li>
+                        <li className="hover:underline cursor-pointer w-fit"><Link href="https://github.com/hyv-app" target="_blank">Github</Link></li>
                     </ul>
                 </div>
                 <h2 className="absolute bottom-0 left-0 translate-y-1/6 text-[156px] sm:text-[192px] bg-linear-to-r from-violet-400 via-cyan-400 to-lime-400 bg-clip-text text-transparent">
