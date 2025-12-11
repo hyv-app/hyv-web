@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { IBM_Plex_Sans } from "next/font/google";
 import { APP_DESCRIPTION, APP_NAME } from "@/constants/common";
-import TopBar from "@/components/common/TopBar";
+import TopBar from "@/components/layout/TopBar";
+import Footer from "@/components/layout/Footer";
 
 const ibm_plex_sans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -30,10 +31,11 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <body
         className={`${ibm_plex_sans.variable} antialiased max-w-[1440px] mx-auto selection:bg-lime-400`}
       >
-        <div className="flex flex-col min-h-dvh gap-12 md:gap-16 p-4 lg:p-6">
-          <TopBar />
+        <TopBar />
+        <div className="flex flex-col min-h-dvh gap-12 md:gap-16 p-4 lg:p-6 relative z-10 bg-background">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
