@@ -93,9 +93,9 @@ const TopBar = () => {
                 <div className="flex items-center gap-3">
                     <Button
                         size="icon"
-                        className="rounded-full border-lime-400 hover:bg-lime-50"
+                        className="rounded-full"
                         variant="outline"
-                    // style={{ animation: "mapPinPulse 1.4s ease-in-out infinite" }}
+                    //  style={{ animation: "mapPinPulse 1.4s ease-in-out infinite" }}
                     >
                         <MapPin className="size-4" />
                     </Button>
