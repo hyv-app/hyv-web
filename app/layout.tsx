@@ -32,7 +32,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         className={`${ibm_plex_sans.variable} antialiased max-w-[1440px] mx-auto selection:bg-lime-400`}
       >
         <TopBar />
-        <div className="flex flex-col min-h-dvh gap-12 md:gap-16 p-4 lg:p-6 pb-12 md:pb-16 lg:pb-16 relative z-10 bg-background">
+        <div className="flex flex-col min-h-dvh gap-12 lg:gap-16 p-4 lg:p-6 pb-12 lg:pb-16 relative z-10 bg-background">
           {children}
         </div>
         <Footer />
