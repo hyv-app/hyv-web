@@ -40,9 +40,9 @@ const HomePage = () => {
         {/* Suggested queries */}
         <div className="max-w-full flex gap-2 font-secondary overflow-auto no-scrollbar">
           {[
-            "Roommates in Whitefield, vegetarian",
-            "Sunburn tickets this weekend",
             "Athletic activities near me",
+            "DJ Snake Sunburn tickets",
+            "Roommates in Whitefield, vegetarian",
           ].map((item, index) => (
             <Button
               key={index}
