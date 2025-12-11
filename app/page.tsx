@@ -47,7 +47,7 @@ const HomePage = () => {
             <Button
               key={index}
               variant="outline"
-              className="rounded-full font-normal hover:border-lime-400 hover:bg-background"
+              className="rounded-full font-normal hover:bg-lime-50/50 hover:border-lime-400 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:bg-lime-50/50 focus-visible:border-lime-400"
             >
               {item}
             </Button>
