@@ -9,7 +9,7 @@ const AboutPage = () => {
     return (
         <>
             {/* Hero Section */}
-            <div className="text-3xl/[1.2] xs:text-4xl/[1.2] md:text-5xl/[1.2] font-medium tracking-tight w-fit" style={{
+            <div className="text-3xl/[1.2] xs:text-4xl/[1.2] lg:text-5xl/[1.2] font-medium tracking-tight w-fit" style={{
                 textBox: "trim-both cap alphabetic"
             }}>
                 An AI-first utility platform
