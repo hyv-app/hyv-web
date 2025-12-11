@@ -83,7 +83,7 @@ const TopBar = () => {
                 <Separator orientation="vertical" />
                 <Button
                     size="icon"
-                    className="rounded-full" // border-lime-400 hover:bg-lime-50/50
+                    className="rounded-full"
                     variant="outline"
                 // style={{ animation: "mapPinPulse 1.4s ease-in-out infinite" }}
                 >
@@ -97,7 +97,7 @@ const TopBar = () => {
                     <Zap className="size-4" />
                     <span>Get PRO</span>
                 </Button>
-                <Button size="icon" className="rounded-full border-violet-400 hover:bg-violet-50/50" variant="outline">
+                <Button size="icon" className="rounded-full border-violet-400 hover:bg-violet-50" variant="outline">
                     <Bell className="size-4" />
                 </Button>
                 <Button className="hidden md:block rounded-full uppercase">Login</Button>

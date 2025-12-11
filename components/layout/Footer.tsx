@@ -28,7 +28,6 @@ const Footer = () => {
                     </ul>
                     <ul>
                         <li className="hover:underline cursor-pointer w-fit"><Link href="/about">{`What's ${APP_NAME}?`}</Link></li>
-                        <li className="hover:underline cursor-pointer w-fit"><Link href="https://github.com/hyv-app" target="_blank">Github</Link></li>
                     </ul>
                 </div>
                 <h2 className="absolute bottom-0 left-0 translate-y-1/6 text-[156px] sm:text-[192px] bg-linear-to-r from-violet-400 via-cyan-400 to-lime-400 bg-clip-text text-transparent">
