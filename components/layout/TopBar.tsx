@@ -79,31 +79,31 @@ const TopBar = () => {
             // Background and border styling based on scroll position
             isAtTop
                 ? "bg-transparent"
-                : "bg-background/75 backdrop-blur supports-backdrop-filter:bg-background/75",
+                : "bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/80",
             // Show/hide based on scroll direction (only when not at top)
             !isAtTop && !isVisible && "-translate-y-full"
         )}>
-            <div className="flex items-center gap-4 h-6">
+            <div className="flex items-center gap-3 md:gap-4 h-6">
                 {/* Logo and app name */}
                 <Link href="/" className="flex items-center gap-3">
                     <Image src="/logo.svg" alt={`${APP_NAME} logo`} width={32} height={32} />
                     <div className="text-lg md:text-xl">{APP_NAME}</div>
                 </Link>
-                <Separator orientation="vertical" className="bg-foreground" />
+                <Separator orientation="vertical" className="bg-muted-foreground" />
                 <div className="flex items-center gap-3">
                     <Button
                         size="icon"
-                        className="rounded-full"
+                        className="rounded-full border-lime-400 hover:bg-lime-50"
                         variant="outline"
                     // style={{ animation: "mapPinPulse 1.4s ease-in-out infinite" }}
                     >
                         <MapPin className="size-4" />
                     </Button>
                     <div className="hidden md:flex flex-col gap-0.5">
-                        <div className="text-sm text-muted-foreground font-secondary w-64 overflow-hidden whitespace-nowrap text-ellipsis">
+                        <div className="text-sm text-muted-foreground text-shadow-2xs font-secondary w-64 overflow-hidden whitespace-nowrap text-ellipsis">
                             Prestige Falcon City, Anjanadri Layout, Kanakapura Road, Konanakunte
                         </div>
-                        <div className="text-xs text-muted-foreground font-secondary uppercase">
+                        <div className="text-xs text-muted-foreground text-shadow-2xs font-secondary uppercase">
                             BENGALURU
                         </div>
                     </div>

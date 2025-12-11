@@ -10,7 +10,7 @@ const HomePage = () => {
       <div className="flex items-center gap-2">
         <div className="h-1 w-10 bg-lime-400 rounded-full" />
         <div
-          className="text-2xl/[1.2] xs:text-3xl/[1.2] md:text-4xl/[1.2] tracking-tight w-fit"
+          className="text-2xl/[1.2] xs:text-3xl/[1.2] lg:text-4xl/[1.2] tracking-tight w-fit"
           style={{
             textBox: "trim-both cap alphabetic",
           }}
