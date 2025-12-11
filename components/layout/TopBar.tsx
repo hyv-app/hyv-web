@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { APP_NAME, TOPBAR_SCROLL_THRESHOLD, TOPBAR_SCROLL_UP_THRESHOLD } from "@/constants/common";
+import { APP_NAME, TOPBAR_SCROLL_THRESHOLD, TOPBAR_SCROLL_DISTANCE_THRESHOLD } from "@/constants/common";
 import Link from "next/link";
 import { Bell, MapPin, Zap } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -14,6 +14,7 @@ const TopBar = () => {
     const [isAtTop, setIsAtTop] = useState<boolean>(true);
     const [lastScrollY, setLastScrollY] = useState<number>(0);
     const scrollUpDistanceRef = useRef<number>(0);
+    const scrollDownDistanceRef = useRef<number>(0);
 
     useEffect(() => {
         // Initialize with current scroll position
@@ -37,21 +38,29 @@ const TopBar = () => {
                 if (currentScrollY < lastScrollY) {
                     const distanceScrolledUp = lastScrollY - currentScrollY;
                     scrollUpDistanceRef.current += distanceScrolledUp;
+                    scrollDownDistanceRef.current = 0; // Reset opposite direction accumulation
 
-                    if (scrollUpDistanceRef.current >= TOPBAR_SCROLL_UP_THRESHOLD) {
+                    if (scrollUpDistanceRef.current >= TOPBAR_SCROLL_DISTANCE_THRESHOLD) {
                         setIsVisible(true);
                         scrollUpDistanceRef.current = 0; // Reset after showing
                     }
                 }
-                // Hide TopBar when scrolling down (but only after 100px to avoid flickering)
-                else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                    setIsVisible(false);
-                    scrollUpDistanceRef.current = 0; // Reset when scrolling down
+                // Hide TopBar when scrolling down (only after threshold)
+                else if (currentScrollY > lastScrollY) {
+                    const distanceScrolledDown = currentScrollY - lastScrollY;
+                    scrollDownDistanceRef.current += distanceScrolledDown;
+                    scrollUpDistanceRef.current = 0; // Reset opposite direction accumulation
+
+                    if (scrollDownDistanceRef.current >= TOPBAR_SCROLL_DISTANCE_THRESHOLD) {
+                        setIsVisible(false);
+                        scrollDownDistanceRef.current = 0; // Reset after hiding
+                    }
                 }
             } else {
                 // Always visible when at top
                 setIsVisible(true);
                 scrollUpDistanceRef.current = 0; // Reset when at top
+                scrollDownDistanceRef.current = 0;
             }
 
             setLastScrollY(currentScrollY);
@@ -74,21 +83,31 @@ const TopBar = () => {
             // Show/hide based on scroll direction (only when not at top)
             !isAtTop && !isVisible && "-translate-y-full"
         )}>
-            <div className="flex items-center gap-3 h-6">
+            <div className="flex items-center gap-4 h-6">
                 {/* Logo and app name */}
                 <Link href="/" className="flex items-center gap-3">
                     <Image src="/logo.svg" alt={`${APP_NAME} logo`} width={32} height={32} />
                     <div className="text-lg md:text-xl">{APP_NAME}</div>
                 </Link>
-                <Separator orientation="vertical" />
-                <Button
-                    size="icon"
-                    className="rounded-full"
-                    variant="outline"
-                // style={{ animation: "mapPinPulse 1.4s ease-in-out infinite" }}
-                >
-                    <MapPin className="size-4" />
-                </Button>
+                <Separator orientation="vertical" className="bg-foreground" />
+                <div className="flex items-center gap-3">
+                    <Button
+                        size="icon"
+                        className="rounded-full"
+                        variant="outline"
+                    // style={{ animation: "mapPinPulse 1.4s ease-in-out infinite" }}
+                    >
+                        <MapPin className="size-4" />
+                    </Button>
+                    <div className="hidden md:flex flex-col gap-0.5">
+                        <div className="text-sm text-muted-foreground font-secondary w-64 overflow-hidden whitespace-nowrap text-ellipsis">
+                            Prestige Falcon City, Anjanadri Layout, Kanakapura Road, Konanakunte
+                        </div>
+                        <div className="text-xs text-muted-foreground font-secondary uppercase">
+                            BENGALURU
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* Right side */}
