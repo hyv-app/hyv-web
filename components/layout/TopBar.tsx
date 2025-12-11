@@ -2,17 +2,18 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { APP_NAME, TOPBAR_SCROLL_THRESHOLD } from "@/constants/common";
+import { APP_NAME, TOPBAR_SCROLL_THRESHOLD, TOPBAR_SCROLL_UP_THRESHOLD } from "@/constants/common";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Zap } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const TopBar = () => {
     const [isVisible, setIsVisible] = useState<boolean>(true);
     const [isAtTop, setIsAtTop] = useState<boolean>(true);
     const [lastScrollY, setLastScrollY] = useState<number>(0);
+    const scrollUpDistanceRef = useRef<number>(0);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -33,17 +34,25 @@ const TopBar = () => {
 
             // Only apply show/hide logic when not at top
             if (currentScrollY >= TOPBAR_SCROLL_THRESHOLD) {
-                // Show TopBar when scrolling up
+                // Show TopBar when scrolling up (only after threshold)
                 if (currentScrollY < lastScrollY) {
-                    setIsVisible(true);
+                    const distanceScrolledUp = lastScrollY - currentScrollY;
+                    scrollUpDistanceRef.current += distanceScrolledUp;
+                    
+                    if (scrollUpDistanceRef.current >= TOPBAR_SCROLL_UP_THRESHOLD) {
+                        setIsVisible(true);
+                        scrollUpDistanceRef.current = 0; // Reset after showing
+                    }
                 }
                 // Hide TopBar when scrolling down (but only after 100px to avoid flickering)
                 else if (currentScrollY > lastScrollY && currentScrollY > 100) {
                     setIsVisible(false);
+                    scrollUpDistanceRef.current = 0; // Reset when scrolling down
                 }
             } else {
                 // Always visible when at top
                 setIsVisible(true);
+                scrollUpDistanceRef.current = 0; // Reset when at top
             }
 
             setLastScrollY(currentScrollY);
