@@ -57,7 +57,7 @@ const HomePage = () => {
 
 
       {/* Activities */}
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
         <div
           className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit text-muted-foreground"
           style={{
@@ -113,7 +113,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
         <div
           className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit text-muted-foreground"
           style={{
