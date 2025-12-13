@@ -47,7 +47,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         >
           <MetaThemeAndBgColor />
           <TopBar />
-          <div className="flex flex-col min-h-dvh gap-14 lg:gap-16 p-4 lg:p-6 pb-14 lg:pb-16 relative z-10 bg-background max-w-[1440px] mx-auto">
+          <div className="flex flex-col min-h-dvh gap-12 lg:gap-16 p-4 lg:p-6 pb-12 lg:pb-16 relative z-10 bg-background max-w-[1440px] mx-auto">
             {children}
           </div>
           <Footer />
