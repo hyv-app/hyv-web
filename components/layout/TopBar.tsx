@@ -88,7 +88,7 @@ const TopBar = () => {
                 {/* Logo and app name */}
                 <Link href="/" className="flex items-center gap-3">
                     <Image src="/logo.svg" alt={`${APP_NAME} logo`} width={32} height={32} />
-                    <div className="text-lg md:text-xl">{APP_NAME}</div>
+                    <div className="hidden xxs:block text-lg md:text-xl">{APP_NAME}</div>
                 </Link>
                 <Separator orientation="vertical" className="bg-muted-foreground" />
                 <div className="flex items-center gap-3">
@@ -115,12 +115,12 @@ const TopBar = () => {
             <div className="flex items-center gap-2">
                 <Button className="bg-orange-50 text-orange-600 dark:bg-orange-950/50 dark:text-orange-400 rounded-full hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white gap-1">
                     <Zap className="size-4" />
-                    <span>Get PRO</span>
+                    <span>PRO</span>
                 </Button>
+                <ThemeToggle />
                 <Button size="icon" className="rounded-full border-violet-400 dark:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-950/50" variant="outline">
                     <Bell className="size-4" />
                 </Button>
-                <ThemeToggle />
                 <Button className="hidden md:block rounded-full uppercase">Login</Button>
             </div>
         </div>
