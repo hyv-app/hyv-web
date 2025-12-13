@@ -22,15 +22,15 @@ const HomePage = () => {
       {/* Glow Input */}
       <div className="flex flex-col items-center justify-center gap-6 lg:gap-8 my-2 lg:my-0">
         <div className="relative w-full max-w-2xl">
-          <div className="absolute inset-0 -z-10 blur-lg bg-linear-to-br from-violet-200 via-cyan-200 to-lime-200" />
+          <div className="absolute inset-0 -z-10 blur-xl bg-linear-to-br from-violet-200 via-cyan-200 to-lime-200 dark:from-violet-900 dark:via-cyan-900 dark:to-lime-900" />
           <form className="flex items-center justify-center gap-2">
             <Input
               placeholder="Find anything around you..."
-              className="font-secondary bg-background rounded-full h-12 px-4"
+              className="font-secondary bg-background dark:bg-background rounded-full h-12 px-4"
             />
             <Button
               type="submit"
-              className="size-12 rounded-full"
+              className="size-12 bg-background hover:bg-foreground hover:text-background dark:bg-background dark:hover:bg-foreground dark:hover:text-background rounded-full"
               variant="outline"
             >
               <Search className="size-5" />
@@ -47,7 +47,7 @@ const HomePage = () => {
             <Button
               key={index}
               variant="outline"
-              className="rounded-full font-normal hover:bg-lime-50 hover:border-lime-400 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:bg-lime-50 focus-visible:border-lime-400"
+              className="rounded-full font-normal hover:bg-lime-50 hover:border-lime-400 dark:hover:bg-lime-950 dark:hover:border-lime-400 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:bg-lime-50 focus-visible:border-lime-400 dark:focus-visible:bg-lime-950 dark:focus-visible:border-lime-400"
             >
               {item}
             </Button>
@@ -59,12 +59,12 @@ const HomePage = () => {
       {/* Activities */}
       <div className="flex flex-col gap-6">
         <div
-          className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit"
+          className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit text-muted-foreground"
           style={{
             textBox: "trim-both cap alphabetic",
           }}
         >
-          <span className="font-medium bg-linear-to-br from-violet-100 via-cyan-100 to-lime-100">Activities</span> you might like
+          <span className="font-medium text-foreground">Activities</span> you might like
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {[
@@ -89,10 +89,10 @@ const HomePage = () => {
           ].map((card) => (
             <div
               key={card.title}
-              className="flex flex-col gap-3 shadow-lg rounded-xl p-4 border"
+              className="flex flex-col gap-3 shadow-lg rounded-xl p-4 border bg-card"
             >
               <div className="text-xl font-medium">{card.title}</div>
-              <Separator className="bg-linear-to-r from-lime-400 to-background" />
+              <Separator className="bg-linear-to-r from-lime-400 to-card" />
               <div className="font-secondary leading-loose">
                 {card.desc}
               </div>
@@ -104,7 +104,7 @@ const HomePage = () => {
               </div>
               <Button
                 variant="outline"
-                className="rounded-full w-fit self-end border-cyan-400 hover:bg-cyan-50 mt-2"
+                className="rounded-full w-fit self-end bg-transparent dark:bg-transparent border-cyan-400 hover:bg-cyan-50 dark:border-cyan-400 dark:hover:bg-cyan-950 mt-2"
               >
                 {`I'm Interested`}
               </Button>
@@ -115,14 +115,14 @@ const HomePage = () => {
 
       <div className="flex flex-col gap-6">
         <div
-          className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit"
+          className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit text-muted-foreground"
           style={{
             textBox: "trim-both cap alphabetic",
           }}
         >
-          <span className="font-medium bg-linear-to-br from-violet-100 via-cyan-100 to-lime-100">Rooms</span> for you
+          <span className="font-medium text-foreground">Rooms</span> for you
         </div>
-        <div className="h-dvh bg-neutral-100 flex items-center justify-center rounded-xl font-medium">
+        <div className="h-dvh bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center rounded-xl font-medium">
           Sample content
         </div>
       </div>

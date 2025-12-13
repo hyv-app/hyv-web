@@ -8,6 +8,7 @@ import { Bell, MapPin, Zap } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Separator } from "../ui/separator";
+import ThemeToggle from "../ThemeToggle";
 
 const TopBar = () => {
     const [isVisible, setIsVisible] = useState<boolean>(true);
@@ -112,13 +113,14 @@ const TopBar = () => {
 
             {/* Right side */}
             <div className="flex items-center gap-2">
-                <Button className="bg-orange-50 text-orange-600 rounded-full hover:bg-orange-600 hover:text-white gap-1">
+                <Button className="bg-orange-50 text-orange-600 dark:bg-orange-950/50 dark:text-orange-400 rounded-full hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white gap-1">
                     <Zap className="size-4" />
                     <span>Get PRO</span>
                 </Button>
-                <Button size="icon" className="rounded-full border-violet-400 hover:bg-violet-50" variant="outline">
+                <Button size="icon" className="rounded-full border-violet-400 dark:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-950/50" variant="outline">
                     <Bell className="size-4" />
                 </Button>
+                <ThemeToggle />
                 <Button className="hidden md:block rounded-full uppercase">Login</Button>
             </div>
         </div>
