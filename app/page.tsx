@@ -20,7 +20,7 @@ const HomePage = () => {
       </div>
 
       {/* Glow Input */}
-      <div className="flex flex-col items-center justify-center gap-4 lg:gap-6">
+      <div className="flex flex-col items-center justify-center gap-6">
         <div className="relative w-full max-w-2xl">
           <div className="absolute inset-0 -z-10 blur-lg bg-linear-to-br from-violet-200 via-cyan-200 to-lime-200 dark:from-violet-900 dark:via-cyan-900 dark:to-lime-900" />
           <form className="flex items-center justify-center gap-2">
@@ -57,12 +57,9 @@ const HomePage = () => {
 
 
       {/* Activities */}
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
         <div
           className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit text-muted-foreground"
-          style={{
-            textBox: "trim-both cap alphabetic",
-          }}
         >
           <span className="font-medium text-foreground">Activities</span> you might like
         </div>
@@ -113,12 +110,9 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
         <div
           className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit text-muted-foreground"
-          style={{
-            textBox: "trim-both cap alphabetic",
-          }}
         >
           <span className="font-medium text-foreground">Rooms</span> for you
         </div>
