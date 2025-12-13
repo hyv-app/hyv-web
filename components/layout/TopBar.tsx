@@ -99,7 +99,7 @@ const TopBar = () => {
                     >
                         <MapPin className="size-4" />
                     </Button>
-                    <div className="hidden md:flex flex-col gap-0.5">
+                    <div className="hidden md:flex flex-col gap-1">
                         <div className="text-sm font-secondary w-64 overflow-hidden whitespace-nowrap text-ellipsis">
                             Prestige Falcon City, Anjanadri Layout, Kanakapura Road, Konanakunte
                         </div>
