@@ -6,6 +6,8 @@ import TopBar from "@/components/layout/TopBar";
 import Footer from "@/components/layout/Footer";
 import ThemeProvider from "@/providers/ThemeProvider";
 import MetaThemeAndBgColor from "@/components/layout/MetaThemeAndBgColor";
+import { FC } from "react";
+import ScrollProvider from "@/providers/ScrollProvider";
 
 const ibm_plex_sans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -26,7 +28,7 @@ export const viewport: Viewport = {
   viewportFit: 'cover'
 };
 
-const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -46,12 +48,14 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           enableSystem
           disableTransitionOnChange
         >
-          <MetaThemeAndBgColor />
-          <TopBar />
-          <div className="flex flex-col min-h-dvh gap-12 lg:gap-16 p-4 lg:p-6 pb-12 lg:pb-16 relative z-10 bg-background max-w-[1440px] mx-auto">
-            {children}
-          </div>
-          <Footer />
+          <ScrollProvider>
+            <MetaThemeAndBgColor />
+            <TopBar />
+            <div className="flex flex-col min-h-dvh gap-12 lg:gap-16 p-4 lg:p-6 pb-12 lg:pb-16 relative z-10 bg-background max-w-[1440px] mx-auto">
+              {children}
+            </div>
+            <Footer />
+          </ScrollProvider>
         </ThemeProvider>
       </body>
     </html>
