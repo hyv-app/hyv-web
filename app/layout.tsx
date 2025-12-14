@@ -37,7 +37,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <link rel="manifest" href="/favicons/site.webmanifest" />
       </head>
       <body
-        className={`${ibm_plex_sans.variable} antialiased selection:bg-lime-400`}
+        className={`${ibm_plex_sans.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

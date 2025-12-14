@@ -137,6 +137,11 @@
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
   }
+
+  /* Ensure dropdown menus respect safe area constraints */
+  [data-slot="dropdown-menu-content"] {
+    max-width: calc(100vw - env(safe-area-inset-left) - env(safe-area-inset-right)) !important;
+  }
 }
 
 @layer utilities {

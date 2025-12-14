@@ -12,7 +12,7 @@ const MetaThemeAndBgColor = () => {
     }, []);
 
     useEffect(() => {
-        if (!mounted) return
+        if (!mounted) return;
 
         // Use resolvedTheme to get the actual theme (handles system theme)
         // If resolvedTheme is not available yet, check the HTML class or use theme
@@ -45,7 +45,7 @@ const MetaThemeAndBgColor = () => {
         bgMeta.setAttribute('content', color)
     }, [theme, resolvedTheme, mounted])
 
-    return null
+    return null;
 }
 
-export default MetaThemeAndBgColor
+export default MetaThemeAndBgColor;
