@@ -132,20 +132,24 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Clash Grotesk', sans-serif;
-    padding-top: env(safe-area-inset-top) !important;
-    padding-right: env(safe-area-inset-right) !important;
-    padding-bottom: env(safe-area-inset-bottom) !important;
     padding-left: env(safe-area-inset-left) !important;
+    padding-right: env(safe-area-inset-right) !important;
+    padding-top: env(safe-area-inset-top) !important;
+    /* padding-bottom: env(safe-area-inset-bottom) !important; */
   }
 }
 
 @layer utilities {
   .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
+
   .no-scrollbar::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari, Opera */
+    display: none;
+    /* Chrome, Safari, Opera */
   }
 }
 

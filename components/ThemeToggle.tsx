@@ -23,7 +23,7 @@ const ThemeToggle = () => {
   if (!mounted) {
     return (
       <Button size="icon" variant="outline" className="rounded-full" disabled>
-        <Sun className="size-4" />
+        <Monitor className="size-4" />
       </Button>
     )
   }
