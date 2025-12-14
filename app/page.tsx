@@ -4,9 +4,6 @@ import { Separator } from "@/components/ui/separator";
 import { Search } from "lucide-react";
 
 const HomePage = () => {
-  // Scroll to top on mount
-  
-
   return (
     <>
       {/* Hero Section */}
