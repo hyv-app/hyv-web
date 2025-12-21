@@ -59,7 +59,7 @@ const HomePage = () => {
         <div
           className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit text-muted-foreground"
         >
-          <span className="font-medium text-foreground">Activities</span> you might like
+          <span className="font-medium text-foreground">Activities</span> trending around you
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {[
@@ -112,7 +112,7 @@ const HomePage = () => {
         <div
           className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit text-muted-foreground"
         >
-          <span className="font-medium text-foreground">Listings</span> for you
+          Popular <span className="font-medium text-foreground">Listings</span> 
         </div>
         <div className="h-dvh bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center rounded-xl font-medium">
           Sample content

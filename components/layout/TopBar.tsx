@@ -60,7 +60,9 @@ const TopBar = () => {
                 <Button size="icon" className="rounded-full border-violet-400 dark:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-950/50" variant="outline">
                     <Bell className="size-4" />
                 </Button>
-                <Button className="hidden md:block rounded-full uppercase">Login</Button>
+                <Link href="/user/dashboard">
+                    <Button className="hidden md:block rounded-full uppercase">Login</Button>
+                </Link>
             </div>
         </div>
     )
