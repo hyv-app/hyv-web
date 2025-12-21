@@ -3,6 +3,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Custom utilities */
+@utility text-normal {
+  text-box: normal;
+}
+
+@utility text-trim {
+  text-box: trim-both cap alphabetic;
+}
+
 /* Custom breakpoints */
 @theme {
   --breakpoint-xxs: 24rem;

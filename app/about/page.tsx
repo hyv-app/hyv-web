@@ -9,9 +9,7 @@ const AboutPage = () => {
     return (
         <>
             {/* Hero Section */}
-            <div className="text-3xl/[1.2] xs:text-4xl/[1.2] lg:text-5xl/[1.2] font-medium tracking-tight w-fit px-4 py-2 border-l-4" style={{
-                textBox: "trim-both cap alphabetic"
-            }}>
+            <div className="text-3xl/[1.2] xs:text-4xl/[1.2] lg:text-5xl/[1.2] font-medium tracking-tight w-fit px-4 py-2 border-l-4 text-trim">
                 An AI-first utility platform
                 <br />
                 <span className="text-muted-foreground">for everything around you.</span>
@@ -23,9 +21,7 @@ const AboutPage = () => {
                     <div className="h-1 w-10 bg-lime-400 rounded-full" />
                     <div className="text-xl md:text-2xl font-semibold">AI-First Interface</div>
                 </div>
-                <div className="leading-loose max-w-2xl font-secondary" style={{
-                    textBox: "trim-both cap alphabetic"
-                }}>
+                <div className="leading-loose max-w-2xl font-secondary text-trim">
                     Our primary interface is an AI Utility Chatbot that understands natural language queries.
                     Instead of manual search, simply ask: <span className="font-semibold italic">{`"Roommates near Whitefield who are vegetarian and have a budget of 25k"`}</span>
                 </div>
@@ -37,9 +33,7 @@ const AboutPage = () => {
                     <div className="h-1 w-10 bg-lime-400 rounded-full" />
                     <div className="text-xl md:text-2xl font-semibold">Core Utilities</div>
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 font-secondary" style={{
-                    textBox: "trim-both cap alphabetic"
-                }}>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 font-secondary text-trim">
                     <div className="space-y-2 p-4 rounded-xl border border-cyan-400 bg-cyan-50/50 dark:bg-cyan-950/50 shadow-lg">
                         <div className="font-semibold italic">Roommate Finder</div>
                         <div className="leading-loose">
@@ -67,9 +61,7 @@ const AboutPage = () => {
                     <div className="h-1 w-10 bg-lime-400 rounded-full" />
                     <div className="text-xl md:text-2xl font-semibold">Why {APP_NAME}</div>
                 </div>
-                <div className="space-y-6 font-secondary max-w-2xl" style={{
-                    textBox: "trim-both cap alphabetic"
-                }}>
+                <div className="space-y-6 font-secondary max-w-2xl text-trim">
                     <div>
                         <div className="font-semibold mb-1 italic">Hyper-local Native</div>
                         <div className="leading-loose">

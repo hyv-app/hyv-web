@@ -1,19 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-import { getGreeting } from "@/lib/utils";
 import { Search } from "lucide-react";
 
-const HomePage = () => {
+const UserDashboard = () => {
   return (
     <>
       {/* Hero Section */}
       <div className="flex items-center gap-2">
         <div className="h-1 w-10 bg-lime-400 rounded-full" />
         <div
-          className="text-2xl/[1.2] xs:text-3xl/[1.2] lg:text-4xl/[1.2] tracking-tight w-fit text-trim"
+          className="text-2xl/[1.2] xs:text-3xl/[1.2] lg:text-4xl/[1.2] tracking-tight w-fit text-trim lg:text-normal"
         >
-          {getGreeting()}
+          Hello <span className="font-medium">Indrajit 😎</span>
         </div>
       </div>
 
@@ -61,7 +60,7 @@ const HomePage = () => {
         >
           <span className="font-medium text-foreground">Activities</span> you might like
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
           {[
             {
               title: "Book Reading Circle",
@@ -122,4 +121,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default UserDashboard;
