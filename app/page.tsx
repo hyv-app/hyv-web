@@ -1,21 +1,14 @@
+import Greeting from "@/components/Greeting";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-import { getGreeting } from "@/lib/utils";
 import { Search } from "lucide-react";
 
 const HomePage = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="flex items-center gap-2">
-        <div className="h-1 w-10 bg-lime-400 rounded-full" />
-        <div
-          className="text-2xl/[1.2] xs:text-3xl/[1.2] lg:text-4xl/[1.2] tracking-tight w-fit text-trim"
-        >
-          {getGreeting()}
-        </div>
-      </div>
+      <Greeting />
 
       {/* Glow Input */}
       <div className="flex flex-col items-center justify-center gap-6">
