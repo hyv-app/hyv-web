@@ -27,7 +27,7 @@ const UserLayout = ({
             <div className="hidden lg:flex gap-6">
                 {/* Sidebar */}
                 <div
-                    className="w-84 border border-neutral-200 dark:border-neutral-800 p-4 rounded-xl flex flex-col justify-between h-128 max-h-[calc(100dvh-10rem)] sticky transition-all duration-300 ease-in-out"
+                    className="w-84 border p-4 rounded-xl flex flex-col justify-between h-128 max-h-[calc(100dvh-10rem)] sticky transition-all duration-300 ease-in-out"
                     style={{ top: sidebarTop }}
                 >
                     <nav className="flex flex-col gap-2 font-medium">
