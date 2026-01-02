@@ -9,14 +9,14 @@ interface IGreetingProps {
 
 const Greeting: FC<IGreetingProps> = ({ name, isDashboard = false }) => {
     const getGreeting = () => {
-        const hour = new Date().getHours()
+        const hour = new Date().getHours();
 
         if (hour < 12) {
-            return <>Good <span className="font-medium">Morning ☀️</span></>
+            return <>Good <span className="font-medium">Morning</span></>
         } else if (hour < 18) {
-            return <>Good <span className="font-medium">Afternoon 🌤️</span></>
+            return <>Good <span className="font-medium">Afternoon</span></>
         } else {
-            return <>Good <span className="font-medium">Evening 🌙</span></>
+            return <>Good <span className="font-medium">Evening</span></>
         }
     }
 
@@ -25,7 +25,7 @@ const Greeting: FC<IGreetingProps> = ({ name, isDashboard = false }) => {
             <div className="h-1 w-10 bg-lime-400 rounded-full" />
             <div className={`text-2xl/[1.2] xs:text-3xl/[1.2] lg:text-4xl/[1.2] tracking-tight w-fit text-trim ${isDashboard && "lg:text-normal"}`}>
                 {isDashboard && name && name.length > 0 ? (
-                    <>Hello <span className="font-medium">{name} 😎</span></>
+                    <>👋🏻 Hello <span className="font-medium">{name}</span></>
                 ) : (
                     getGreeting()
                 )}

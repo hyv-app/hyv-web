@@ -2,7 +2,7 @@
 
 import { useTopBarVisibility } from "@/hooks/useTopBarVisibility";
 import { Button } from "@/components/ui/button";
-import { Home, Compass, Bookmark, MessageCircle } from "lucide-react";
+import { Home, Bookmark, MessageCircle, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -36,7 +36,7 @@ const UserLayout = ({
                             <span>Home</span>
                         </Link>
                         <Link href="/user/explore" className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors">
-                            <Compass className="size-5" />
+                            <Search className="size-5" />
                             <span>Explore</span>
                         </Link>
                         <Link href="/user/bookmarks" className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors">
