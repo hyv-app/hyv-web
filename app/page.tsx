@@ -7,7 +7,7 @@ import { Search } from "lucide-react";
 const HomePage = () => {
   return (
     <>
-      {/* Hero Section */}
+      {/* Greeting Section */}
       <Greeting />
 
       {/* Glow Input */}

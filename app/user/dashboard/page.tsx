@@ -7,7 +7,7 @@ import { Search } from "lucide-react";
 const UserDashboard = () => {
   return (
     <>
-      {/* Hero Section */}
+      {/* Greeting Section */}
       <Greeting name="Indrajit" isDashboard/>
 
       {/* Glow Input */}
