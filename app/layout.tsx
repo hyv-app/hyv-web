@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import ThemeProvider from "@/providers/ThemeProvider";
 import MetaThemeAndBgColor from "@/components/layout/MetaThemeAndBgColor";
 import { FC } from "react";
+import { Separator } from "@/components/ui/separator";
 
 const ibm_plex_sans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -52,6 +53,7 @@ const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
           <div className="flex flex-col min-h-dvh gap-12 lg:gap-16 p-4 lg:p-6 pb-12 lg:pb-16 relative z-10 bg-background max-w-[1440px] mx-auto">
             {children}
           </div>
+          <Separator />
           <Footer />
         </ThemeProvider>
       </body>

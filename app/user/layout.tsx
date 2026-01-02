@@ -3,7 +3,6 @@
 import { useTopBarVisibility } from "@/hooks/useTopBarVisibility";
 import { Button } from "@/components/ui/button";
 import { Home, Bookmark, MessageCircle, Search } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
