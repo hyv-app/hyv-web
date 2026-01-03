@@ -2,7 +2,7 @@
 
 import { useTopBarVisibility } from "@/hooks/useTopBarVisibility";
 import { Button } from "@/components/ui/button";
-import { Home, Bookmark, MessageCircle, Search } from "lucide-react";
+import { Home, Bookmark, MessageCircle, Search, Plus } from "lucide-react";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -30,7 +30,7 @@ const UserLayout = ({
                     style={{ top: sidebarTop }}
                 >
                     <nav className="flex flex-col gap-2 font-medium">
-                        <Link href="/user/dashboard" className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors">
+                        <Link href="/user/home" className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors">
                             <Home className="size-5" />
                             <span>Home</span>
                         </Link>
@@ -59,8 +59,9 @@ const UserLayout = ({
                                 <span className="text-xs text-muted-foreground uppercase">@indrajit</span>
                             </div>
                         </div>
-                        <Button className="w-full rounded-full uppercase" size="lg">
-                            Post
+                        <Button className="w-full rounded-full uppercase gap-1" size="lg">
+                            <Plus className="size-4" />
+                            New Post
                         </Button>
                     </div>
                 </div>

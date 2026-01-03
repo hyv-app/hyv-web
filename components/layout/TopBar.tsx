@@ -9,9 +9,12 @@ import { cn } from "@/lib/utils";
 import { Separator } from "../ui/separator";
 import ThemeToggle from "../ThemeToggle";
 import { useTopBarVisibility } from "@/hooks/useTopBarVisibility";
+import { usePathname } from "next/navigation";
+import path from "path";
 
 const TopBar = () => {
     const { isVisible, isAtTop } = useTopBarVisibility();
+    const pathname = usePathname();
 
     return (
         <div className={cn(
@@ -60,9 +63,11 @@ const TopBar = () => {
                 <Button size="icon" className="rounded-full border-violet-400 dark:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-950/50" variant="outline">
                     <Bell className="size-4" />
                 </Button>
-                <Link href="/user/dashboard" className="hidden md:block">
-                    <Button className="rounded-full uppercase">Login</Button>
-                </Link>
+                {!pathname.startsWith("/user") &&
+                    <Link href="/user/home" className="hidden md:block">
+                        <Button className="rounded-full uppercase">Login</Button>
+                    </Link>
+                }
             </div>
         </div>
     )

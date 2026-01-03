@@ -4,10 +4,10 @@ import { FC } from "react"
 
 interface IGreetingProps {
     name?: string;
-    isDashboard?: boolean;
+    isHome?: boolean;
 }
 
-const Greeting: FC<IGreetingProps> = ({ name, isDashboard = false }) => {
+const Greeting: FC<IGreetingProps> = ({ name, isHome = false }) => {
     const getGreeting = () => {
         const hour = new Date().getHours();
 
@@ -23,8 +23,8 @@ const Greeting: FC<IGreetingProps> = ({ name, isDashboard = false }) => {
     return (
         <div className="flex items-center gap-2">
             <div className="h-1 w-10 bg-lime-400 rounded-full" />
-            <div className={`text-2xl/[1.2] xs:text-3xl/[1.2] lg:text-4xl/[1.2] tracking-tight w-fit text-trim ${isDashboard && "lg:text-normal"}`}>
-                {isDashboard && name && name.length > 0 ? (
+            <div className={`text-2xl/[1.2] xs:text-3xl/[1.2] lg:text-4xl/[1.2] tracking-tight w-fit text-trim ${isHome && "lg:text-normal"}`}>
+                {isHome && name && name.length > 0 ? (
                     <>👋🏻 Hello <span className="font-medium">{name}</span></>
                 ) : (
                     getGreeting()

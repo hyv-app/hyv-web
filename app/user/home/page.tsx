@@ -4,11 +4,11 @@ import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Search } from "lucide-react";
 
-const UserDashboard = () => {
+const UserHome = () => {
   return (
     <>
       {/* Greeting Section */}
-      <Greeting name="Indrajit" isDashboard/>
+      <Greeting name="Indrajit" isHome/>
 
       {/* Glow Input */}
       <div className="flex flex-col items-center justify-center gap-6">
@@ -115,4 +115,4 @@ const UserDashboard = () => {
   );
 };
 
-export default UserDashboard;
+export default UserHome;
