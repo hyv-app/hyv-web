@@ -10,7 +10,6 @@ import { Separator } from "../ui/separator";
 import ThemeToggle from "../ThemeToggle";
 import { useTopBarVisibility } from "@/hooks/useTopBarVisibility";
 import { usePathname } from "next/navigation";
-import path from "path";
 
 const TopBar = () => {
     const { isVisible, isAtTop } = useTopBarVisibility();
@@ -18,10 +17,10 @@ const TopBar = () => {
 
     return (
         <div className={cn(
-            "sticky top-0 z-50 transition-all ease-in-out w-full max-w-[1440px] mx-auto p-4 lg:p-6 flex justify-between items-center mb-4",
+            "sticky top-0 z-50 transition-all ease-in-out w-full max-w-[1440px] mx-auto flex justify-between items-center py-4 lg:py-6",
             // Background and border styling based on scroll position
             isAtTop
-                ? "bg-transparent"
+                ? "bg-background"
                 : "bg-background/80 backdrop-blur supports-backdrop-filter:bg-background/80",
             // Show/hide based on scroll direction (only when not at top)
             !isAtTop && !isVisible && "-translate-y-full"
@@ -30,7 +29,7 @@ const TopBar = () => {
                 {/* Logo and app name */}
                 <Link href="/" className="flex items-center gap-3">
                     <Image src="/logo.svg" alt={`${APP_NAME} logo`} width={32} height={32} />
-                    <div className="hidden xxs:block text-lg md:text-xl">{APP_NAME}</div>
+                    <div className="hidden xxs:block text-xl">{APP_NAME}</div>
                 </Link>
                 <Separator orientation="vertical" className="bg-muted-foreground" />
                 <div className="flex items-center gap-3">
