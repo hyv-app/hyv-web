@@ -17,7 +17,7 @@ const TopBar = () => {
 
     return (
         <div className={cn(
-            "sticky top-0 z-50 transition-all ease-in-out w-full max-w-[1440px] mx-auto flex justify-between items-center py-4 lg:py-6",
+            "sticky top-0 z-50 transition-all ease-in-out w-full max-w-[1440px] mx-auto flex justify-between items-center p-4 lg:p-6",
             // Background and border styling based on scroll position
             isAtTop
                 ? "bg-background"

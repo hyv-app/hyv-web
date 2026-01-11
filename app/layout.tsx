@@ -49,9 +49,9 @@ const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
           disableTransitionOnChange
         >
           <MetaThemeAndBgColor />
-          <div className="flex flex-col min-h-dvh gap-8 md:gap-10 px-4 lg:px-6 relative z-10 bg-background max-w-[1440px] mx-auto">
+          <div className="flex flex-col min-h-dvh gap-8 md:gap-10 relative z-10 bg-background max-w-[1440px] mx-auto">
             <TopBar />
-            <div className="flex flex-col gap-12 md:gap-16 pb-12 md:pb-16">
+            <div className="flex flex-col gap-12 md:gap-16 px-4 lg:px-6 pb-12 md:pb-16">
               {children}
             </div>
           </div>
