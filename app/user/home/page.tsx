@@ -81,7 +81,7 @@ const UserHome = () => {
             >
               <div className="text-xl font-medium">{card.title}</div>
               <Separator className="bg-linear-to-r from-lime-400 to-card" />
-              <div className="font-secondary leading-loose">
+              <div className="font-secondary leading-9">
                 {card.desc}
               </div>
               <div className="flex flex-wrap items-center gap-1 text-sm font-secondary text-muted-foreground">
