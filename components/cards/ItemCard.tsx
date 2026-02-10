@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Tag, Package } from "lucide-react";
+import { MapPin, Tag, LayoutGrid } from "lucide-react";
 
 interface ItemCardProps {
   category: "FURNITURE" | "ELECTRONICS" | "VEHICLES" | "BOOKS" | "TICKETS" | "OTHER";
@@ -49,16 +49,16 @@ const ItemCard = ({
 
   return (
     <div className="flex flex-col gap-3 shadow-lg rounded-xl p-4 border bg-card relative h-full">
-      <div className="flex items-start justify-between gap-2">
-        <div className="flex-1">
-          <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1">
-            <Package className="size-3" />
+      <div className="flex items-start justify-between gap-6">
+        <div className="flex-1 flex flex-col gap-1.5">
+          <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
+            <LayoutGrid className="size-3" />
             {categoryLabels[category]}
           </div>
-          <div className="text-xl font-medium">{title}</div>
+          <div className="text-xl/normal font-medium line-clamp-2">{title}</div>
         </div>
-        <div className="text-right">
-          <div className="text-2xl font-bold text-foreground">
+        <div>
+          <div className="text-xl font-bold text-foreground text-trim py-2 px-3 bg-foreground/5 rounded-lg">
             {currencySymbols[currency]}{price.toLocaleString()}
           </div>
         </div>
@@ -69,7 +69,7 @@ const ItemCard = ({
       <div className="font-secondary leading-7 flex-1">{description}</div>
       
       <div className="flex items-start gap-2 text-sm text-muted-foreground">
-        <MapPin className="size-4 mt-0.5 flex-shrink-0" />
+        <MapPin className="size-4 mt-0.5 shrink-0" />
         <span className="font-secondary">{locationDetails}</span>
       </div>
 
@@ -105,10 +105,10 @@ const ItemCard = ({
         </div>
         <Button
           variant="outline"
-          className="rounded-full w-fit bg-transparent dark:bg-transparent border-cyan-400 hover:bg-cyan-50 dark:border-cyan-400 dark:hover:bg-cyan-950 flex-shrink-0"
+          className="rounded-full w-fit bg-transparent dark:bg-transparent border-cyan-400 hover:bg-cyan-50 dark:border-cyan-400 dark:hover:bg-cyan-950 shrink-0"
           disabled={status !== "AVAILABLE"}
         >
-          {status === "AVAILABLE" ? "Contact Seller" : status === "SOLD" ? "Sold Out" : "Reserved"}
+          {status === "AVAILABLE" ? "I want this" : status === "SOLD" ? "Sold Out" : "Reserved"}
         </Button>
       </div>
     </div>

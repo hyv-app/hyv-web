@@ -2,7 +2,7 @@
 CREATE EXTENSION IF NOT EXISTS vector;
 CREATE EXTENSION IF NOT EXISTS postgis;
 
--- 1. NEW ENUMS (Country & Currency)
+-- 1. ENUMS
 CREATE TYPE "country" AS ENUM (
   'INDIA',
   'USA'
@@ -13,11 +13,9 @@ CREATE TYPE "currency" AS ENUM (
   'DOLLAR'
 );
 
--- 2. EXISTING ENUMS
 CREATE TYPE "rental_type" AS ENUM (
-  'ROOM',
   'APARTMENT',
-  'LOOKING_FOR'
+  'ROOM'
 );
 
 CREATE TYPE "item_category" AS ENUM (
@@ -76,7 +74,7 @@ CREATE TYPE "bookmark_target" AS ENUM (
   'ACTIVITY'
 );
 
--- 3. CORE TABLES
+-- 2. CORE TABLES
 
 CREATE TABLE "users" (
   "id" uuid PRIMARY KEY DEFAULT uuidv7(),
@@ -175,7 +173,7 @@ CREATE TABLE "activities" (
   "updated_at" timestamptz
 );
 
--- 4. SAAS & LIMITS TABLES
+-- 3. SAAS & LIMITS TABLES
 
 CREATE TABLE "subscriptions" (
   "id" uuid PRIMARY KEY DEFAULT uuidv7(),
@@ -213,7 +211,7 @@ CREATE TABLE "interests" (
   "updated_at" timestamptz
 );
 
--- 5. SOCIAL & METADATA
+-- 4. SOCIAL & METADATA
 
 CREATE TABLE "conversations" (
   "id" uuid PRIMARY KEY DEFAULT uuidv7(),
@@ -241,7 +239,7 @@ CREATE TABLE "bookmarks" (
   "created_at" timestamptz DEFAULT (now())
 );
 
--- 6. EMBEDDINGS (AI/Vector Search)
+-- 5. EMBEDDINGS (AI/Vector Search)
 -- 1536 is standard dimension for OpenAI text-embedding-3-small
 
 CREATE TABLE "user_embeddings" (

@@ -159,8 +159,8 @@ const HomePage = () => {
             ownerName="Kavya"
           />
           <RentalCard
-            type="LOOKING_FOR"
-            title="Looking for Female Roommate"
+            type="ROOM"
+            title="Female Roommate Needed"
             description="Vegetarian preferred. 3BHK apartment, looking for one more flatmate. Quiet neighborhood."
             price={9000}
             locationDetails="Whitefield, Bangalore"

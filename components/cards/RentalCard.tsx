@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Tag } from "lucide-react";
+import { MapPin, Tag, Home } from "lucide-react";
 
 interface RentalCardProps {
-  type: "ROOM" | "APARTMENT" | "LOOKING_FOR";
+  type: "ROOM" | "APARTMENT";
   title: string;
   description: string;
   price: number;
@@ -29,7 +29,6 @@ const RentalCard = ({
   const typeLabels = {
     ROOM: "Room",
     APARTMENT: "Apartment",
-    LOOKING_FOR: "Looking For",
   };
 
   const currencySymbols = {
@@ -39,18 +38,19 @@ const RentalCard = ({
 
   return (
     <div className="flex flex-col gap-3 shadow-lg rounded-xl p-4 border bg-card relative h-full">
-      <div className="flex items-start justify-between gap-2">
-        <div className="flex-1">
-          <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1">
+      <div className="flex items-start justify-between gap-6">
+        <div className="flex-1 flex flex-col gap-1.5">
+          <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
+            <Home className="size-3" />
             {typeLabels[type]}
           </div>
-          <div className="text-xl font-medium">{title}</div>
+          <div className="text-xl/normal font-medium line-clamp-2">{title}</div>
         </div>
-        <div className="text-right">
-          <div className="text-2xl font-bold text-foreground">
+        <div>
+          <div className="text-xl font-bold text-foreground text-trim py-2 px-3 bg-foreground/5 rounded-lg">
             {currencySymbols[currency]}{price.toLocaleString()}
+            <span className="text-xs font-normal text-muted-foreground block text-right uppercase">per month</span>
           </div>
-          <div className="text-xs text-muted-foreground">per month</div>
         </div>
       </div>
       
@@ -59,7 +59,7 @@ const RentalCard = ({
       <div className="font-secondary leading-7 flex-1">{description}</div>
       
       <div className="flex items-start gap-2 text-sm text-muted-foreground">
-        <MapPin className="size-4 mt-0.5 flex-shrink-0" />
+        <MapPin className="size-4 mt-0.5 shrink-0" />
         <span className="font-secondary">{locationDetails}</span>
       </div>
 
@@ -92,9 +92,9 @@ const RentalCard = ({
         )}
         <Button
           variant="outline"
-          className="rounded-full w-fit bg-transparent dark:bg-transparent border-violet-400 hover:bg-violet-50 dark:border-violet-400 dark:hover:bg-violet-950 flex-shrink-0"
+          className="rounded-full w-fit bg-transparent dark:bg-transparent border-violet-400 hover:bg-violet-50 dark:border-violet-400 dark:hover:bg-violet-950 shrink-0"
         >
-          Contact Owner
+          Connect
         </Button>
       </div>
     </div>
