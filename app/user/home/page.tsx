@@ -1,7 +1,9 @@
 import Greeting from "@/components/Greeting";
+import ActivityCard from "@/components/cards/ActivityCard";
+import RentalCard from "@/components/cards/RentalCard";
+import ItemCard from "@/components/cards/ItemCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
 import { Search } from "lucide-react";
 
 const UserHome = () => {
@@ -55,49 +57,35 @@ const UserHome = () => {
           <span className="font-medium text-foreground">Activities</span> you might like
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
-          {[
-            {
-              title: "Book Reading Circle",
-              desc: `Discuss 'The Midnight Library' over coffee. Small group, mixed genres welcome.`,
-              host: "Aditi",
-              date: "Sat, 18 Jan at 5:00 PM",
-            },
-            {
-              title: "Morning Run Meetup",
-              desc: "5K easy pace around Cubbon Park. All levels welcome, cool-down stretch included.",
-              host: "Raj",
-              date: "Sun, 19 Jan at 6:30 AM",
-            },
-            {
-              title: "Board Games + Chai",
-              desc: "Catan, Codenames, Splendor. Casual evening with snacks in Indiranagar.",
-              host: "Neeraj",
-              date: "Fri, 24 Jan at 7:30 PM",
-            },
-          ].map((card) => (
-            <div
-              key={card.title}
-              className="flex flex-col gap-3 shadow-lg rounded-xl p-4 border bg-card"
-            >
-              <div className="text-xl font-medium">{card.title}</div>
-              <Separator className="bg-linear-to-r from-lime-400 to-card" />
-              <div className="font-secondary leading-9">
-                {card.desc}
-              </div>
-              <div className="flex flex-wrap items-center gap-1 text-sm font-secondary text-muted-foreground">
-                <span>Hosted by</span>
-                <span className="font-medium text-foreground underline">{card.host}</span>
-                <span>•</span>
-                <span className="italic">{card.date}</span>
-              </div>
-              <Button
-                variant="outline"
-                className="rounded-full w-fit self-end bg-transparent dark:bg-transparent border-cyan-400 hover:bg-cyan-50 dark:border-cyan-400 dark:hover:bg-cyan-950 mt-2"
-              >
-                {`I'm Interested`}
-              </Button>
-            </div>
-          ))}
+          <ActivityCard
+            title="Book Reading Circle"
+            description="Discuss 'The Midnight Library' over coffee. Small group, mixed genres welcome."
+            host="Aditi"
+            startTime="Sat, 18 Jan at 5:00 PM"
+            endTime="7:00 PM"
+            locationDetails="Cafe Matteo, Koramangala"
+            maxParticipants={8}
+            currentParticipants={5}
+          />
+          <ActivityCard
+            title="Morning Run Meetup"
+            description="5K easy pace around Cubbon Park. All levels welcome, cool-down stretch included."
+            host="Raj"
+            startTime="Sun, 19 Jan at 6:30 AM"
+            endTime="8:00 AM"
+            locationDetails="Cubbon Park Main Gate"
+            maxParticipants={15}
+            currentParticipants={12}
+          />
+          <ActivityCard
+            title="Board Games + Chai"
+            description="Catan, Codenames, Splendor. Casual evening with snacks in Indiranagar."
+            host="Neeraj"
+            startTime="Fri, 24 Jan at 7:30 PM"
+            locationDetails="Game Theory Cafe, Indiranagar"
+            maxParticipants={10}
+            currentParticipants={6}
+          />
         </div>
       </div>
 
@@ -105,10 +93,58 @@ const UserHome = () => {
         <div
           className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit text-muted-foreground"
         >
-          <span className="font-medium text-foreground">Listings</span> for you
+          <span className="font-medium text-foreground">Items</span> for you
         </div>
-        <div className="h-dvh bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center rounded-xl font-medium">
-          Sample content
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
+          <ItemCard
+            category="ELECTRONICS"
+            title="iPhone 15 Pro"
+            description="Space Black, 256GB. Mint condition, 3 months old. Still under warranty."
+            price={82000}
+            locationDetails="Koramangala, Bangalore"
+            tags={["Like New", "Warranty"]}
+            sellerName="Karthik"
+            status="AVAILABLE"
+          />
+          <ItemCard
+            category="BOOKS"
+            title="Web Development Book Bundle"
+            description="5 books on React, Node.js, and TypeScript. Barely used, excellent condition."
+            price={1500}
+            locationDetails="HSR Layout, Bangalore"
+            tags={["Tech", "Bundle Deal"]}
+            sellerName="Divya"
+            status="AVAILABLE"
+          />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-4">
+        <div
+          className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit text-muted-foreground"
+        >
+          <span className="font-medium text-foreground">Rentals</span> matching your preferences
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
+          <RentalCard
+            type="ROOM"
+            title="Cozy Room in Tech Park Area"
+            description="Fully furnished with WiFi, AC, and all amenities. Close to major IT parks."
+            price={11000}
+            locationDetails="Bellandur, Bangalore"
+            tags={["Furnished", "WiFi", "AC"]}
+            ownerName="Rahul"
+          />
+          <RentalCard
+            type="APARTMENT"
+            title="1BHK Independent House"
+            description="Ground floor, separate entrance. Perfect for young professionals or couples."
+            price={15000}
+            locationDetails="BTM Layout, Bangalore"
+            tags={["Independent", "Ground Floor"]}
+            ownerName="Lakshmi"
+            isBoosted
+          />
         </div>
       </div>
     </>

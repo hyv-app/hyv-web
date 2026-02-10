@@ -1,0 +1,104 @@
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { MapPin, Tag } from "lucide-react";
+
+interface RentalCardProps {
+  type: "ROOM" | "APARTMENT" | "LOOKING_FOR";
+  title: string;
+  description: string;
+  price: number;
+  currency?: "RUPEE" | "DOLLAR";
+  locationDetails: string;
+  tags?: string[];
+  ownerName: string;
+  images?: string[];
+  isBoosted?: boolean;
+}
+
+const RentalCard = ({
+  type,
+  title,
+  description,
+  price,
+  currency = "RUPEE",
+  locationDetails,
+  tags = [],
+  ownerName,
+  isBoosted = false,
+}: RentalCardProps) => {
+  const typeLabels = {
+    ROOM: "Room",
+    APARTMENT: "Apartment",
+    LOOKING_FOR: "Looking For",
+  };
+
+  const currencySymbols = {
+    RUPEE: "₹",
+    DOLLAR: "$",
+  };
+
+  return (
+    <div className="flex flex-col gap-3 shadow-lg rounded-xl p-4 border bg-card relative h-full">
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex-1">
+          <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1">
+            {typeLabels[type]}
+          </div>
+          <div className="text-xl font-medium">{title}</div>
+        </div>
+        <div className="text-right">
+          <div className="text-2xl font-bold text-foreground">
+            {currencySymbols[currency]}{price.toLocaleString()}
+          </div>
+          <div className="text-xs text-muted-foreground">per month</div>
+        </div>
+      </div>
+      
+      <Separator className="bg-linear-to-r from-violet-400 to-card" />
+      
+      <div className="font-secondary leading-7 flex-1">{description}</div>
+      
+      <div className="flex items-start gap-2 text-sm text-muted-foreground">
+        <MapPin className="size-4 mt-0.5 flex-shrink-0" />
+        <span className="font-secondary">{locationDetails}</span>
+      </div>
+
+      {tags.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              className="inline-flex items-center gap-1 text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded-full"
+            >
+              <Tag className="size-3" />
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+      
+      <div className="flex flex-wrap items-center gap-1 text-sm font-secondary text-muted-foreground">
+        <span>Posted by</span>
+        <span className="font-medium text-foreground underline">{ownerName}</span>
+      </div>
+      
+      <div className="flex items-center justify-between gap-2 mt-auto pt-2">
+        {isBoosted ? (
+          <div className="bg-foreground text-background text-xs font-medium px-2 py-1 rounded-full">
+            Boosted 🚀
+          </div>
+        ) : (
+          <div />
+        )}
+        <Button
+          variant="outline"
+          className="rounded-full w-fit bg-transparent dark:bg-transparent border-violet-400 hover:bg-violet-50 dark:border-violet-400 dark:hover:bg-violet-950 flex-shrink-0"
+        >
+          Contact Owner
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+export default RentalCard;
