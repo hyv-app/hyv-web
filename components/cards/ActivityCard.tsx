@@ -72,7 +72,7 @@ const ActivityCard = ({
             Trending 📈
           </div>
         ) : (
-          <div />
+          <div></div>
         )}
         <Button
           variant="outline"
