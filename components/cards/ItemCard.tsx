@@ -50,10 +50,10 @@ const ItemCard = ({
   return (
     <div className="flex flex-col gap-3 shadow-lg rounded-xl p-4 border bg-card relative h-full">
       <div className="flex items-start justify-between gap-6">
-        <div className="flex-1 flex flex-col gap-1.5">
-          <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
+        <div className="flex-1 flex flex-col gap-2">
+          <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide w-fit">
             <LayoutGrid className="size-3" />
-            {categoryLabels[category]}
+            <span className="text-trim">{categoryLabels[category]}</span>
           </div>
           <div className="text-xl/normal font-medium line-clamp-2">{title}</div>
         </div>
@@ -93,16 +93,13 @@ const ItemCard = ({
       </div>
       
       <div className="flex items-center justify-between gap-2 mt-auto pt-2">
-        <div className="flex gap-2">
-          {isBoosted && (
-            <div className="bg-foreground text-background text-xs font-medium px-2 py-1 rounded-full">
-              Boosted 🚀
-            </div>
-          )}
-          <div className={`${statusColors[status]} text-xs font-medium px-2 py-1 rounded-full`}>
-            {status}
+        {isBoosted ? (
+          <div className="bg-linear-to-r from-lime-200 via-cyan-200 to-violet-200 text-black text-xs font-medium px-2 py-1 rounded-full">
+            Boosted 🚀
           </div>
-        </div>
+        ) : (
+          <div />
+        )}
         <Button
           variant="outline"
           className="rounded-full w-fit bg-transparent dark:bg-transparent border-cyan-400 hover:bg-cyan-50 dark:border-cyan-400 dark:hover:bg-cyan-950 shrink-0"

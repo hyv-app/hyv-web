@@ -39,10 +39,10 @@ const RentalCard = ({
   return (
     <div className="flex flex-col gap-3 shadow-lg rounded-xl p-4 border bg-card relative h-full">
       <div className="flex items-start justify-between gap-6">
-        <div className="flex-1 flex flex-col gap-1.5">
-          <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide">
+        <div className="flex-1 flex flex-col gap-2">
+          <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide w-fit">
             <Home className="size-3" />
-            {typeLabels[type]}
+            <span className="text-trim">{typeLabels[type]}</span>
           </div>
           <div className="text-xl/normal font-medium line-clamp-2">{title}</div>
         </div>
@@ -84,7 +84,7 @@ const RentalCard = ({
       
       <div className="flex items-center justify-between gap-2 mt-auto pt-2">
         {isBoosted ? (
-          <div className="bg-foreground text-background text-xs font-medium px-2 py-1 rounded-full">
+          <div className="bg-linear-to-r from-lime-200 via-cyan-200 to-violet-200 text-black text-xs font-medium px-2 py-1 rounded-full">
             Boosted 🚀
           </div>
         ) : (
