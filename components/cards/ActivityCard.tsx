@@ -50,14 +50,14 @@ const ActivityCard = ({
         
         <div className="flex items-center gap-2 text-muted-foreground">
           <Users className="size-4" />
-          <span className="font-secondary">
+          <div className="font-secondary flex items-center gap-1">
             {currentParticipants}/{maxParticipants} joined
             {spotsLeft > 0 && (
-              <span className="ml-1 text-lime-600 dark:text-lime-400">
+              <span className="text-lime-600 dark:text-lime-400 font-medium">
                 • {spotsLeft} spot{spotsLeft !== 1 ? "s" : ""} left
               </span>
             )}
-          </span>
+          </div>
         </div>
       </div>
 
