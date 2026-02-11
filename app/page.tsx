@@ -95,7 +95,7 @@ const HomePage = () => {
         <div
           className="text-xl/[1.2] xs:text-2xl/[1.2] w-fit text-muted-foreground"
         >
-          Popular <span className="font-medium text-foreground">Listings</span> 
+          Popular <span className="font-medium text-foreground">Items</span> 
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           <ItemCard

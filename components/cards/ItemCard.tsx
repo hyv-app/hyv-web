@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { MapPin, Tag, LayoutGrid } from "lucide-react";
+import { MapPin, Tag, LayoutGrid, ImageIcon } from "lucide-react";
+import Image from "next/image";
 
 interface ItemCardProps {
   category: "FURNITURE" | "ELECTRONICS" | "VEHICLES" | "BOOKS" | "TICKETS" | "OTHER";
@@ -12,6 +13,7 @@ interface ItemCardProps {
   tags?: string[];
   sellerName: string;
   status: "AVAILABLE" | "SOLD" | "RESERVED";
+  images?: string[];
   isBoosted?: boolean;
 }
 
@@ -25,6 +27,7 @@ const ItemCard = ({
   tags = [],
   sellerName,
   status,
+  images = [],
   isBoosted = false,
 }: ItemCardProps) => {
   const categoryLabels = {
@@ -48,8 +51,30 @@ const ItemCard = ({
   };
 
   return (
-    <div className="flex flex-col gap-3 shadow-lg rounded-xl p-4 border bg-card relative h-full">
-      <div className="flex items-start justify-between gap-6">
+    <div className="flex flex-col shadow-lg rounded-xl border bg-card relative h-full overflow-hidden">
+      {/* Image Section */}
+      <div className="relative w-full h-64 shrink-0">
+        {images.length > 0 ? (
+          <Image
+            src={images[0]}
+            alt={title}
+            fill
+            className="object-cover"
+          />
+        ) : (
+          <div className="w-full h-full bg-linear-to-br from-neutral-200 via-neutral-100 to-neutral-200 dark:from-neutral-800 dark:via-neutral-900 dark:to-neutral-800 flex items-center justify-center">
+            <ImageIcon className="size-10 text-muted-foreground/30" />
+          </div>
+        )}
+        {images.length > 1 && (
+          <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-full">
+            +{images.length - 1} more
+          </div>
+        )}
+      </div>
+
+      <div className="flex flex-col gap-3 p-4 flex-1">
+        <div className="flex items-start justify-between gap-6">
         <div className="flex-1 flex flex-col gap-2">
           <div className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide w-fit">
             <LayoutGrid className="size-3" />
@@ -107,6 +132,7 @@ const ItemCard = ({
         >
           {status === "AVAILABLE" ? "I want this" : status === "SOLD" ? "Sold Out" : "Reserved"}
         </Button>
+      </div>
       </div>
     </div>
   );
