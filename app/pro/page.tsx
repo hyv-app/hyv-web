@@ -150,7 +150,7 @@ const ProPage = () => {
             {/* Benefits List */}
             <div className="w-full bg-linear-to-br from-orange-50 to-pink-50 dark:from-orange-950/20 dark:to-pink-950/20 rounded-3xl p-8 md:p-12 border">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-                    What's included
+                    {`What's included`}
                 </h2>
                 
                 <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
@@ -159,7 +159,7 @@ const ProPage = () => {
                             key={index}
                             className="flex items-center gap-3"
                         >
-                            <div className="flex-shrink-0 p-1 rounded-full bg-linear-to-br from-orange-500 to-pink-500">
+                            <div className="shrink-0 p-1 rounded-full bg-linear-to-br from-orange-500 to-pink-500">
                                 <Check className="size-4 text-white" />
                             </div>
                             <span className="text-sm md:text-base font-secondary">{benefit}</span>

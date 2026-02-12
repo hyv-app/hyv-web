@@ -204,7 +204,7 @@ const BookmarksPage = () => {
           <div className="flex flex-col gap-2">
             <h3 className="text-xl font-medium">No bookmarks yet</h3>
             <p className="text-muted-foreground max-w-md">
-              Save items, rentals, and activities you're interested in to access them easily later
+              {`Save items, rentals, and activities you're interested in to access them easily later`}
             </p>
           </div>
           <Button className="rounded-full mt-2">
