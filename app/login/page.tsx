@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 const LoginPage = () => {
+  const router = useRouter();
   const [phoneNumber, setPhoneNumber] = useState("");
   const [otp, setOtp] = useState("");
   const [showOtp, setShowOtp] = useState(false);
@@ -29,8 +31,8 @@ const LoginPage = () => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     setIsLoading(false);
-    // Handle successful login here
-    console.log("Login successful");
+    // Redirect to user home after successful login
+    router.push("/user/home");
   };
 
   const handleBack = () => {
@@ -46,7 +48,7 @@ const LoginPage = () => {
           <h1 className="text-4xl font-semibold tracking-tight">
             Welcome
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground font-secondary">
             {showOtp 
               ? "Enter the code sent to your phone" 
               : "Enter your phone number to get started"}
@@ -62,14 +64,14 @@ const LoginPage = () => {
                 placeholder="Phone number"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value.replace(/\D/g, "").slice(0, 10))}
-                className="h-12 text-center text-lg"
+                className="h-12 text-lg font-secondary"
                 maxLength={10}
                 autoFocus
               />
             </div>
             <Button 
               type="submit" 
-              className="w-full h-12"
+              className="w-full h-12 font-secondary"
               disabled={phoneNumber.length !== 10 || isLoading}
             >
               {isLoading ? "Sending..." : "Continue"}
@@ -83,18 +85,18 @@ const LoginPage = () => {
                 placeholder="Enter OTP"
                 value={otp}
                 onChange={(e) => setOtp(e.target.value.replace(/\D/g, "").slice(0, 6))}
-                className="h-12 text-center text-lg tracking-widest"
+                className="h-12 text-lg tracking-widest font-secondary"
                 maxLength={6}
                 autoFocus
               />
-              <p className="text-sm text-muted-foreground text-center">
+              <p className="text-sm text-muted-foreground text-center font-secondary">
                 Sent to +91 {phoneNumber}
               </p>
             </div>
             <div className="space-y-3">
               <Button 
                 type="submit" 
-                className="w-full h-12"
+                className="w-full h-12 font-secondary"
                 disabled={otp.length !== 6 || isLoading}
               >
                 {isLoading ? "Verifying..." : "Verify"}
@@ -102,7 +104,7 @@ const LoginPage = () => {
               <Button 
                 type="button"
                 variant="ghost"
-                className="w-full h-12"
+                className="w-full h-12 font-secondary"
                 onClick={handleBack}
                 disabled={isLoading}
               >

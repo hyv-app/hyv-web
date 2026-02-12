@@ -40,7 +40,7 @@ const UserHome = () => {
             <Button
               key={index}
               variant="outline"
-              className="rounded-full font-normal hover:bg-lime-50 hover:border-lime-400 dark:hover:bg-lime-950 dark:hover:border-lime-400 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:bg-lime-50 focus-visible:border-lime-400 dark:focus-visible:bg-lime-950 dark:focus-visible:border-lime-400"
+              className="rounded-full font-normal focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:border-foreground dark:focus-visible:border-foreground"
             >
               {item}
             </Button>

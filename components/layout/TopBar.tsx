@@ -54,16 +54,18 @@ const TopBar = () => {
 
             {/* Right side */}
             <div className="flex items-center gap-2">
-                <Button className="bg-orange-50 text-orange-600 dark:bg-orange-950/50 dark:text-orange-400 rounded-full hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white gap-1">
-                    <Zap className="size-4" />
-                    <span>PRO</span>
-                </Button>
+                <Link href={`/pro?redirect=${encodeURIComponent(pathname)}`}>
+                    <Button className="bg-orange-50 text-orange-600 dark:bg-orange-950/50 dark:text-orange-400 rounded-full hover:bg-orange-600 hover:text-white dark:hover:bg-orange-600 dark:hover:text-white gap-1">
+                        <Zap className="size-4" />
+                        <span>PRO</span>
+                    </Button>
+                </Link>
                 <ThemeToggle />
                 <Button size="icon" className="rounded-full border-violet-400 dark:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-950" variant="outline">
                     <Bell className="size-4" />
                 </Button>
                 {!pathname.startsWith("/user") &&
-                    <Link href="/user/home" className="hidden md:block">
+                    <Link href="/login" className="hidden md:block">
                         <Button className="rounded-full uppercase">Login</Button>
                     </Link>
                 }

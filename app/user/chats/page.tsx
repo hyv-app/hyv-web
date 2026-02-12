@@ -167,7 +167,7 @@ const ChatsPage = () => {
           <MessageCircle className="size-8 text-cyan-600 dark:text-cyan-400" />
           <div>
             <h1 className="text-3xl md:text-4xl font-semibold">Chats</h1>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground font-secondary">
               {conversations.reduce((acc, c) => acc + c.unreadCount, 0)} unread messages
             </p>
           </div>
@@ -188,7 +188,7 @@ const ChatsPage = () => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
               <Input
                 placeholder="Search conversations..."
-                className="pl-9 rounded-full"
+                className="pl-9 rounded-full font-secondary"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -213,18 +213,18 @@ const ChatsPage = () => {
                 </Avatar>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-2 mb-1">
-                    <span className="font-medium truncate">{conversation.name}</span>
-                    <span className="text-xs text-muted-foreground shrink-0">
+                    <span className="font-medium truncate font-secondary">{conversation.name}</span>
+                    <span className="text-xs text-muted-foreground shrink-0 font-secondary">
                       {conversation.lastMessageTime}
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground truncate">
+                  <p className="text-sm text-muted-foreground truncate font-secondary">
                     {conversation.lastMessage}
                   </p>
                   {conversation.relatedTo && (
                     <div className="mt-2">
                       <span
-                        className={`text-xs px-2 py-1 rounded-full ${getRelatedBadgeColor(
+                        className={`text-xs px-2 py-1 rounded-full font-secondary ${getRelatedBadgeColor(
                           conversation.relatedTo.type
                         )}`}
                       >
@@ -265,9 +265,9 @@ const ChatsPage = () => {
                     </AvatarFallback>
                   </Avatar>
                   <div>
-                    <div className="font-medium">{selectedConversation?.name}</div>
+                    <div className="font-medium font-secondary">{selectedConversation?.name}</div>
                     {selectedConversation?.relatedTo && (
-                      <div className="text-xs text-muted-foreground">
+                      <div className="text-xs text-muted-foreground font-secondary">
                         Re: {selectedConversation.relatedTo.title}
                       </div>
                     )}
@@ -292,9 +292,9 @@ const ChatsPage = () => {
                           : "bg-card border"
                       }`}
                     >
-                      <p className="text-sm">{message.text}</p>
+                      <p className="text-sm font-secondary">{message.text}</p>
                       <span
-                        className={`text-xs mt-1 block ${
+                        className={`text-xs mt-1 block font-secondary ${
                           message.sender === "me"
                             ? "text-primary-foreground/70"
                             : "text-muted-foreground"
@@ -318,7 +318,7 @@ const ChatsPage = () => {
                 >
                   <Input
                     placeholder="Type a message..."
-                    className="flex-1 rounded-full"
+                    className="flex-1 rounded-full font-secondary"
                     value={messageInput}
                     onChange={(e) => setMessageInput(e.target.value)}
                   />
@@ -340,7 +340,7 @@ const ChatsPage = () => {
               </div>
               <div className="flex flex-col gap-2">
                 <h3 className="text-xl font-medium">Select a conversation</h3>
-                <p className="text-muted-foreground max-w-md">
+                <p className="text-muted-foreground max-w-md font-secondary">
                   Choose a conversation from the list to start chatting
                 </p>
               </div>

@@ -19,7 +19,7 @@ const UserLayout = ({
     return (
         <>
             {/* Mobile and Tablet */}
-            <div className="flex lg:hidden flex-col min-h-dvh gap-12 lg:gap-16">
+            <div className="flex lg:hidden flex-col min-h-dvh gap-14 lg:gap-16">
                 {children}
             </div>
             {/* Larger screens */}
@@ -67,7 +67,7 @@ const UserLayout = ({
                 </div>
 
                 {/* Main Content */}
-                <div className="min-w-2/3 flex flex-col flex-1 min-h-dvh gap-12 lg:gap-16">{children}</div>
+                <div className="min-w-2/3 flex flex-col flex-1 min-h-dvh gap-14 lg:gap-16">{children}</div>
             </div>
         </>
     );

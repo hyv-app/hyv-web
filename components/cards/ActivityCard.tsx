@@ -68,7 +68,7 @@ const ActivityCard = ({
       
       <div className="flex items-center justify-between gap-2 mt-auto pt-2">
         {isTrending ? (
-          <div className="bg-linear-to-br from-lime-100 via-cyan-100 to-violet-100 text-black text-xs font-medium px-2 py-1 rounded-full self-end">
+          <div className="bg-linear-to-br from-violet-100 via-cyan-100 to-lime-100 text-black text-xs font-medium px-2 py-1 rounded-full self-end">
             Trending
           </div>
         ) : (

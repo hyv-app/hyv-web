@@ -32,10 +32,10 @@ const AboutPage = () => {
                     <div className="h-1 w-10 bg-lime-400 rounded-full" />
                     <div className="text-xl md:text-2xl font-semibold">AI-First Interface</div>
                 </div>
-                <div className="leading-9 max-w-2xl font-secondary text-trim">
+                <div className="leading-9 max-w-2xl font-secondary text-trim mb-8">
                     Our primary interface is an AI-powered search that understands complex, natural language queries. Instead of manual filtering, simply ask: <span className="font-semibold italic">{`"Find me a verified roommate near Whitefield who likes board games and has a budget of 15k"`}</span>
                 </div>
-                <div className="text-sm/loose text-muted-foreground font-secondary max-w-2xl">
+                <div className="text-sm/loose text-muted-foreground font-secondary max-w-2xl text-trim">
                     Powered by vector embeddings and semantic search, the AI instantly finds hyper-relevant matches tailored to your exact needs.
                 </div>
             </section>
@@ -74,21 +74,21 @@ const AboutPage = () => {
                     <div className="h-1 w-10 bg-lime-400 rounded-full" />
                     <div className="text-xl md:text-2xl font-semibold">Why Choose {APP_NAME}</div>
                 </div>
-                <div className="space-y-6 font-secondary max-w-2xl text-trim">
+                <div className="space-y-6 font-secondary max-w-2xl">
                     <div>
-                        <div className="font-semibold mb-1 italic">Hyper-Local Native</div>
+                        <div className="font-semibold italic underline underline-offset-2 mb-1">Hyper-Local Native</div>
                         <div className="leading-9">
                             Geo-indexed for block-level relevance. No more sifting through irrelevant results from across the city. Get what matters in your neighborhood.
                         </div>
                     </div>
                     <div>
-                        <div className="font-semibold mb-1 italic">Trusted Ecosystem</div>
+                        <div className="font-semibold italic underline underline-offset-2 mb-1">Trusted Ecosystem</div>
                         <div className="leading-9">
                             Multi-level verification system with email and phone confirmation. Verified users get priority visibility, building a truly trustworthy community.
                         </div>
                     </div>
                     <div>
-                        <div className="font-semibold mb-1 italic">Super App Structure</div>
+                        <div className="font-semibold italic underline underline-offset-2 mb-1">Super App Structure</div>
                         <div className="leading-9">
                             One platform for rentals, marketplace, and activities. No need to juggle multiple apps—everything you need is in one place.
                         </div>

@@ -88,7 +88,7 @@ const BookmarksPage = () => {
           {activeTab === "all" && (
             <h2 className="text-xl font-medium">Saved Activities</h2>
           )}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <ActivityCard
               title="Morning Yoga Session"
               description="Start your day with mindful yoga practice. Suitable for all levels with modifications."
@@ -120,7 +120,7 @@ const BookmarksPage = () => {
           {activeTab === "all" && (
             <h2 className="text-xl font-medium">Saved Rentals</h2>
           )}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <RentalCard
               type="APARTMENT"
               title="Modern 2BHK with Balcony"
@@ -159,7 +159,7 @@ const BookmarksPage = () => {
           {activeTab === "all" && (
             <h2 className="text-xl font-medium">Saved Items</h2>
           )}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <ItemCard
               category="ELECTRONICS"
               title="Canon EOS R6 Camera"

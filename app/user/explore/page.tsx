@@ -13,10 +13,10 @@ const ExplorePage = () => {
   const [activeTab, setActiveTab] = useState<TabType>("all");
 
   const tabs: { value: TabType; label: string; icon: React.ReactNode }[] = [
-    { value: "all", label: "All", icon: <Sparkles className="size-4" /> },
+    { value: "all", label: "All", icon: null },
     { value: "activities", label: "Activities", icon: <TrendingUp className="size-4" /> },
     { value: "rentals", label: "Rentals", icon: <Flame className="size-4" /> },
-    { value: "items", label: "Items", icon: <Flame className="size-4" /> },
+    { value: "items", label: "Items", icon: <Sparkles className="size-4" /> },
   ];
 
   return (
@@ -59,7 +59,7 @@ const ExplorePage = () => {
             <TrendingUp className="size-6 text-lime-600 dark:text-lime-400" />
             <h2 className="text-2xl font-medium">Trending Activities</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <ActivityCard
               title="Weekend Hiking Group"
               description="Join us for a scenic trail hike through Nandi Hills. Beginner-friendly with photo stops and breakfast."
@@ -135,7 +135,7 @@ const ExplorePage = () => {
             <Flame className="size-6 text-orange-600 dark:text-orange-400" />
             <h2 className="text-2xl font-medium">Hot Rentals</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <RentalCard
               type="APARTMENT"
               title="Luxury 3BHK with Pool Access"
@@ -204,7 +204,7 @@ const ExplorePage = () => {
             <Sparkles className="size-6 text-cyan-600 dark:text-cyan-400" />
             <h2 className="text-2xl font-medium">Trending Items</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <ItemCard
               category="ELECTRONICS"
               title="iPhone 15 Pro Max"
