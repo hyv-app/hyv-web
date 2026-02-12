@@ -119,8 +119,8 @@ const ItemCard = ({
 
         <div className="flex items-center justify-between gap-2 mt-auto pt-2">
           {isBoosted ? (
-            <div className="bg-linear-to-r from-lime-200 via-cyan-200 to-violet-200 text-black text-xs font-medium px-2 py-1 rounded-full self-end">
-              Boosted 🚀
+            <div className="bg-linear-to-t from-cyan-200 to-cyan-50 text-black text-xs font-medium px-2 py-1 rounded-full self-end">
+              Boosted
             </div>
           ) : <div></div>}
           <Button

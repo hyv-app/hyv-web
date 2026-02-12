@@ -53,7 +53,7 @@ const ActivityCard = ({
           <div className="font-secondary flex items-center gap-1">
             {currentParticipants}/{maxParticipants} joined
             {spotsLeft > 0 && (
-              <span className="text-lime-600 dark:text-lime-400 font-medium">
+              <span className="text-lime-600 dark:text-lime-400">
                 • {spotsLeft} spot{spotsLeft !== 1 ? "s" : ""} left
               </span>
             )}
@@ -68,8 +68,8 @@ const ActivityCard = ({
       
       <div className="flex items-center justify-between gap-2 mt-auto pt-2">
         {isTrending ? (
-          <div className="bg-linear-to-r from-lime-200 via-cyan-200 to-violet-200 text-black text-xs font-medium px-2 py-1 rounded-full self-end">
-            Trending 📈
+          <div className="bg-linear-to-br from-lime-100 via-cyan-100 to-violet-100 text-black text-xs font-medium px-2 py-1 rounded-full self-end">
+            Trending
           </div>
         ) : (
           <div></div>
