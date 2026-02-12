@@ -66,14 +66,8 @@ const ProPageContent = () => {
     return (
         <div className="flex flex-col items-center gap-12 md:gap-16 max-w-6xl mx-auto w-full">
             {/* Hero Section */}
-            <div className="flex flex-col items-center text-center gap-6 w-full">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-                    Upgrade to <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-pink-500">PRO</span>
-                </h1>
-                
-                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl font-secondary">
-                    Take your {APP_NAME} experience to the next level with premium features designed to help you succeed
-                </p>
+            <div className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight">
+                Upgrade to <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-pink-500">PRO</span>
             </div>
 
             {/* Pricing Card */}
@@ -104,7 +98,7 @@ const ProPageContent = () => {
                             </p>
                         </div>
 
-                        <Button 
+                        <Button
                             onClick={handleSubscribe}
                             className="w-full h-12 text-lg rounded-full bg-linear-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white shadow-lg font-secondary"
                         >
@@ -124,12 +118,12 @@ const ProPageContent = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
                     Everything you need to grow
                 </h2>
-                
+
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {features.map((feature, index) => {
                         const Icon = feature.icon;
                         return (
-                            <div 
+                            <div
                                 key={index}
                                 className={cn(
                                     "flex flex-col gap-3 p-6 rounded-2xl border bg-card transition-all hover:shadow-lg hover:border-orange-500/50",
@@ -153,10 +147,10 @@ const ProPageContent = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
                     {`What's included`}
                 </h2>
-                
+
                 <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
                     {benefits.map((benefit, index) => (
-                        <div 
+                        <div
                             key={index}
                             className="flex items-center gap-3"
                         >
@@ -177,7 +171,7 @@ const ProPageContent = () => {
                 <p className="text-lg mb-6 opacity-90 font-secondary">
                     Join thousands of successful professionals on {APP_NAME}
                 </p>
-                <Button 
+                <Button
                     onClick={handleSubscribe}
                     size="lg"
                     className="h-14 px-8 text-lg rounded-full bg-white text-orange-600 hover:bg-gray-100 font-secondary"
