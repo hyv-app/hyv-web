@@ -5,8 +5,9 @@ import { APP_NAME } from "@/constants/common";
 import { Check, Zap, Star, TrendingUp, Shield, Clock, Sparkles, ArrowRight } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { Suspense } from "react";
 
-const ProPage = () => {
+const ProPageContent = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const redirectUrl = searchParams.get('redirect') || '/';
@@ -191,6 +192,14 @@ const ProPage = () => {
                 <p>Trusted by 10,000+ professionals • 4.9/5 rating • 99% satisfaction rate</p>
             </div>
         </div>
+    );
+};
+
+const ProPage = () => {
+    return (
+        <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+            <ProPageContent />
+        </Suspense>
     );
 };
 
