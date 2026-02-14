@@ -5,6 +5,7 @@ import { Zap, Star, TrendingUp, Shield, Clock, Sparkles, ArrowRight } from "luci
 import { useRouter, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Suspense } from "react";
+import { MONTHLY_PRICE_INDIA } from "@/constants/common";
 
 const ProPageContent = () => {
     const router = useRouter();
@@ -79,11 +80,11 @@ const ProPageContent = () => {
 
                         <div className="flex flex-col gap-3 items-center">
                             <div className="flex items-baseline justify-center gap-2 font-secondary">
-                                <span className="text-5xl font-bold">₹299</span>
-                                <span className="text-muted-foreground">FOR 3 months</span>
+                                <span className="text-5xl font-bold">₹{MONTHLY_PRICE_INDIA}</span>
+                                <span className="text-muted-foreground">PER MONTH</span>
                             </div>
                             <p className="text-sm text-muted-foreground font-secondary">
-                                or ₹1000/year (save 20%)
+                                or ₹2000/year (save ~20%)
                             </p>
                         </div>
 

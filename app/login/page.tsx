@@ -42,7 +42,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex h-[calc(100dvh-12rem)] w-full shadow-lg rounded-lg">
+    <div className="flex min-h-fit h-[calc(100dvh-12rem)] w-full lg:shadow-lg rounded-lg">
       {/* Left Side - Decorative Gradient Box with Mosaic Pattern */}
       <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden rounded-l-lg border-y border-l">
         {/* Mosaic tile pattern */}
@@ -68,7 +68,7 @@ const LoginPage = () => {
       </div>
 
       {/* Right Side - Login Form */}
-      <div className="flex-1 flex items-center justify-center border-y border-r rounded-r-lg">
+      <div className="flex-1 flex items-center justify-center lg:border-y lg:border-r rounded-r-lg py-16">
         <div className="w-full max-w-md space-y-9">
           {/* Headline */}
           <div className="text-center space-y-3">
@@ -91,7 +91,7 @@ const LoginPage = () => {
                 </label>
                 <Input
                   type="tel"
-                  placeholder="Enter 10-digit mobile number"
+                  placeholder="Enter 10-digit phone number"
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value.replace(/\D/g, "").slice(0, 10))}
                   className="h-12 font-secondary"
@@ -102,12 +102,12 @@ const LoginPage = () => {
               <Button
                 type="submit"
                 variant="secondary"
-                className="w-full h-14 text-base md:text-lg rounded-full"
+                className="w-full h-14 text-lg rounded-full"
                 disabled={phoneNumber.length !== 10 || isLoading}
               >
                 {isLoading ? (
                   <span className="flex items-center gap-2">
-                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    <div className="w-5 h-5 border-2 border-foreground/30 border-t-foreground rounded-full animate-spin" />
                     Sending OTP...
                   </span>
                 ) : (
@@ -137,12 +137,12 @@ const LoginPage = () => {
               <div className="space-y-3">
                 <Button
                   type="submit"
-                  className="w-full h-12 text-base md:text-lg rounded-full"
+                  className="w-full h-12 text-lg rounded-full"
                   disabled={otp.length !== 6 || isLoading}
                 >
                   {isLoading ? (
                     <span className="flex items-center gap-2">
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <div className="w-5 h-5 border-2 border-background/30 border-t-background rounded-full animate-spin" />
                       Verifying...
                     </span>
                   ) : (
