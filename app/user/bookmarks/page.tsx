@@ -35,9 +35,9 @@ const BookmarksPage = () => {
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-3">
               <Bookmark className="size-8 text-violet-600 dark:text-violet-400" />
-              <h1 className="text-3xl md:text-4xl font-semibold">
+              <div className="text-3xl md:text-4xl font-semibold">
                 Bookmarks
-              </h1>
+              </div>
             </div>
             <p className="text-muted-foreground text-lg">
               Your saved items, rentals, and activities
@@ -86,7 +86,7 @@ const BookmarksPage = () => {
       {(activeTab === "all" || activeTab === "activities") && counts.activities > 0 && (
         <div className="flex flex-col gap-4">
           {activeTab === "all" && (
-            <h2 className="text-xl font-medium">Saved Activities</h2>
+            <div className="text-xl font-medium">Saved Activities</div>
           )}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <ActivityCard
@@ -118,7 +118,7 @@ const BookmarksPage = () => {
       {(activeTab === "all" || activeTab === "rentals") && counts.rentals > 0 && (
         <div className="flex flex-col gap-4">
           {activeTab === "all" && (
-            <h2 className="text-xl font-medium">Saved Rentals</h2>
+            <div className="text-xl font-medium">Saved Rentals</div>
           )}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <RentalCard
@@ -157,7 +157,7 @@ const BookmarksPage = () => {
       {(activeTab === "all" || activeTab === "items") && counts.items > 0 && (
         <div className="flex flex-col gap-4">
           {activeTab === "all" && (
-            <h2 className="text-xl font-medium">Saved Items</h2>
+            <div className="text-xl font-medium">Saved Items</div>
           )}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <ItemCard
@@ -202,7 +202,7 @@ const BookmarksPage = () => {
             <Bookmark className="size-10 text-muted-foreground" />
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-xl font-medium">No bookmarks yet</h3>
+            <div className="text-xl font-medium">No bookmarks yet</div>
             <p className="text-muted-foreground max-w-md">
               {`Save items, rentals, and activities you're interested in to access them easily later`}
             </p>

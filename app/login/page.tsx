@@ -42,21 +42,22 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex h-[calc(100dvh-12rem)] w-full gap-4">
+    <div className="flex h-[calc(100dvh-12rem)] w-full shadow-lg rounded-lg">
       {/* Left Side - Decorative Gradient Box with Mosaic Pattern */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden">
+      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden rounded-l-lg border-y border-l">
         {/* Mosaic tile pattern */}
         <div className="absolute inset-0 opacity-30 dark:opacity-60">
-          <div className="grid grid-cols-6 gap-2 h-full">
-            {Array.from({ length: 60 }).map((_, i) => (
+          <div className="grid grid-cols-6 h-full">
+            {Array.from({ length: 180 }).map((_, i) => (
               <div
                 key={i}
-                className={`rounded-lg ${i % 3 === 0
+                className={`${
+                  i % 3 === 0
                     ? "bg-violet-400"
                     : i % 3 === 1
                       ? "bg-cyan-400"
                       : "bg-lime-400"
-                  }`}
+                }`}
                 style={{
                   opacity: 0.4 + (i % 5) * 0.12,
                 }}
@@ -67,14 +68,14 @@ const LoginPage = () => {
       </div>
 
       {/* Right Side - Login Form */}
-      <div className="flex-1 flex items-center justify-center border rounded-xl">
-        <div className="w-full max-w-md space-y-8">
+      <div className="flex-1 flex items-center justify-center border-y border-r rounded-r-lg">
+        <div className="w-full max-w-md space-y-9">
           {/* Headline */}
           <div className="text-center space-y-3">
-            <h2 className="text-4xl font-medium tracking-tight">
-              Welcome to {APP_NAME} 🥳
-            </h2>
-            <p className="text-muted-foreground text-lg font-secondary">
+            <div className="text-3xl lg:text-4xl font-medium tracking-tight">
+              Welcome to <span className="bg-linear-to-r from-violet-400 via-cyan-400 to-lime-400 bg-clip-text text-transparent">{APP_NAME}</span>
+            </div>
+            <p className="text-muted-foreground leading-relaxed md:text-lg/relaxed font-secondary">
               {showOtp
                 ? "Enter the OTP sent to your phone"
                 : "Enter your phone number to login or register"}
@@ -83,9 +84,9 @@ const LoginPage = () => {
 
           {/* Form */}
           {!showOtp ? (
-            <form onSubmit={handlePhoneSubmit} className="space-y-6">
+            <form onSubmit={handlePhoneSubmit} className="space-y-4">
               <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium text-muted-foreground font-secondary uppercase">
+                <label className="text-xs font-medium text-muted-foreground font-secondary uppercase">
                   Phone Number
                 </label>
                 <Input
@@ -93,14 +94,15 @@ const LoginPage = () => {
                   placeholder="Enter 10-digit mobile number"
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value.replace(/\D/g, "").slice(0, 10))}
-                  className="h-14 text-lg font-secondary"
+                  className="h-12 font-secondary"
                   maxLength={10}
                   autoFocus
                 />
               </div>
               <Button
                 type="submit"
-                className="w-full h-14 text-lg"
+                variant="secondary"
+                className="w-full h-14 text-base md:text-lg rounded-full"
                 disabled={phoneNumber.length !== 10 || isLoading}
               >
                 {isLoading ? (
@@ -116,7 +118,7 @@ const LoginPage = () => {
           ) : (
             <form onSubmit={handleOtpSubmit} className="space-y-6">
               <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium text-muted-foreground font-secondary uppercase">
+                <label className="text-xs font-medium text-muted-foreground font-secondary uppercase">
                   One-Time Password
                 </label>
                 <Input
@@ -124,7 +126,7 @@ const LoginPage = () => {
                   placeholder="Enter 6-digit OTP"
                   value={otp}
                   onChange={(e) => setOtp(e.target.value.replace(/\D/g, "").slice(0, 6))}
-                  className="h-14 text-lg font-secondary"
+                  className="h-12 font-secondary"
                   maxLength={6}
                   autoFocus
                 />
@@ -135,7 +137,7 @@ const LoginPage = () => {
               <div className="space-y-3">
                 <Button
                   type="submit"
-                  className="w-full h-12 text-lg"
+                  className="w-full h-12 text-base md:text-lg rounded-full"
                   disabled={otp.length !== 6 || isLoading}
                 >
                   {isLoading ? (
@@ -149,8 +151,8 @@ const LoginPage = () => {
                 </Button>
                 <Button
                   type="button"
-                  variant="outline"
-                  className="w-full h-12 uppercase"
+                  variant="secondary"
+                  className="w-full h-12 uppercase rounded-full"
                   onClick={handleBack}
                   disabled={isLoading}
                 >

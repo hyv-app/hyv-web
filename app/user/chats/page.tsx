@@ -165,7 +165,7 @@ const ChatsPage = () => {
         <div className="flex items-center gap-3">
           <MessageCircle className="size-8 text-cyan-600 dark:text-cyan-400" />
           <div>
-            <h1 className="text-3xl md:text-4xl font-semibold">Chats</h1>
+            <div className="text-3xl md:text-4xl font-semibold">Chats</div>
             <p className="text-muted-foreground font-secondary">
               {conversations.reduce((acc, c) => acc + c.unreadCount, 0)} unread messages
             </p>
@@ -338,7 +338,7 @@ const ChatsPage = () => {
                 <MessageCircle className="size-10 text-muted-foreground" />
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-medium">Select a conversation</h3>
+                <div className="text-xl font-medium">Select a conversation</div>
                 <p className="text-muted-foreground max-w-md font-secondary">
                   Choose a conversation from the list to start chatting
                 </p>

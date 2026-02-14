@@ -52,73 +52,72 @@ const ProPageContent = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center gap-12 md:gap-16 max-w-6xl mx-auto w-full">
+        <div className="flex flex-col items-center gap-12 max-w-6xl mx-auto w-full">
             {/* Hero Section */}
             <div className="flex flex-col items-center text-center gap-6 w-full">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight">
+                <div className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">
                     Upgrade to <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-cyan-400 to-lime-400">PRO</span>
-                </h1>
+                </div>
             </div>
 
             {/* Pricing Card */}
             <div className="w-full max-w-md">
-                <div className="relative rounded-3xl border-2 border-foreground p-8 shadow-lg">
+                <div className="relative rounded-3xl border p-4 shadow-lg bg-card">
                     {/* Popular Badge */}
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 min-w-max">
                         <div className="border border-violet-400 bg-background text-foreground px-6 py-1.5 rounded-full text-sm font-medium font-secondary">
                             Costs less than a pizza 🍕
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-6 items-center">
+                    <div className="flex flex-col gap-6 items-center mt-6">
                         {/* <div className="flex items-center gap-3">
                             <div className="p-3 rounded-2xl bg-linear-to-br bg-orange-50 text-orange-600 dark:bg-orange-950/50 dark:text-orange-400">
                                 <Zap className="size-8" />
                             </div>
                         </div> */}
 
-                        <div className="text-center">
+                        <div className="flex flex-col gap-3 items-center">
                             <div className="flex items-baseline justify-center gap-2 font-secondary">
                                 <span className="text-5xl font-bold">₹299</span>
                                 <span className="text-muted-foreground">FOR 3 months</span>
                             </div>
-                            <p className="text-sm text-muted-foreground mt-2 font-secondary">
+                            <p className="text-sm text-muted-foreground font-secondary">
                                 or ₹1000/year (save 20%)
                             </p>
                         </div>
 
                         <Button
                             onClick={handleSubscribe}
-                            className="w-full h-12 text-lg rounded-full bg-linear-to-r shadow-lg font-secondary"
+                            className="w-full h-12 text-lg rounded-full bg-linear-to-r shadow-lg"
                         >
                             Get PRO
-                            <ArrowRight className="size-5" />
                         </Button>
                     </div>
                 </div>
             </div>
 
             {/* Features Grid */}
-            <div className="w-full">
-                <h2 className="text-3xl md:text-4xl font-medium text-center mb-8">
+            <div className="flex flex-col items-center gap-4 md:gap-6 w-full mt-4 lg:mt-8">
+                <div className="text-2xl lg:text-3xl font-medium">
                     Everything you need 🥳
-                </h2>
+                </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {features.map((feature, index) => {
                         const Icon = feature.icon;
                         return (
                             <div
                                 key={index}
                                 className={cn(
-                                    "flex flex-col gap-4 p-6 rounded-2xl border bg-card transition-all hover:shadow-md hover:border-foreground",
+                                    "flex flex-col gap-1.5 p-4 rounded-2xl border bg-card shadow-lg",
                                 )}
                             >
-                                <div className="p-2 rounded-full w-fit bg-cyan-100 dark:bg-cyan-900">
+                                <div className="p-2 rounded-full w-fit bg-cyan-100 dark:bg-cyan-900 mb-3">
                                     <Icon className="size-6" />
                                 </div>
                                 <div className="text-lg font-semibold">{feature.title}</div>
-                                <p className="text-trim leading-loose text-muted-foreground font-secondary">{feature.description}</p>
+                                <p className="leading-loose text-muted-foreground font-secondary">{feature.description}</p>
                             </div>
                         );
                     })}

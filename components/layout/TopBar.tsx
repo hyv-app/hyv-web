@@ -25,7 +25,7 @@ const TopBar = () => {
             // Show/hide based on scroll direction (only when not at top)
             !isAtTop && !isVisible && "-translate-y-full"
         )}>
-            <div className="flex items-center gap-3 md:gap-4 h-6">
+            <div className="flex items-center gap-3 h-6">
                 {/* Logo and app name */}
                 <Link href="/" className="flex items-center gap-3">
                     <Image src="/logo.svg" alt={`${APP_NAME} logo`} width={32} height={32} />

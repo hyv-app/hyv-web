@@ -24,9 +24,9 @@ const ExplorePage = () => {
       {/* Header Section */}
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
-          <h1 className="text-3xl md:text-4xl font-semibold">
+          <div className="text-3xl md:text-4xl font-semibold">
             Explore
-          </h1>
+          </div>
           <p className="text-muted-foreground text-lg">
             Discover trending activities, rentals, and items in your area
           </p>
@@ -57,7 +57,7 @@ const ExplorePage = () => {
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
             <TrendingUp className="size-6 text-lime-600 dark:text-lime-400" />
-            <h2 className="text-2xl font-medium">Trending Activities</h2>
+            <div className="text-2xl font-medium">Trending Activities</div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <ActivityCard
@@ -133,7 +133,7 @@ const ExplorePage = () => {
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
             <Flame className="size-6 text-orange-600 dark:text-orange-400" />
-            <h2 className="text-2xl font-medium">Hot Rentals</h2>
+            <div className="text-2xl font-medium">Hot Rentals</div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <RentalCard
@@ -202,7 +202,7 @@ const ExplorePage = () => {
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
             <Sparkles className="size-6 text-cyan-600 dark:text-cyan-400" />
-            <h2 className="text-2xl font-medium">Trending Items</h2>
+            <div className="text-2xl font-medium">Trending Items</div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
             <ItemCard
