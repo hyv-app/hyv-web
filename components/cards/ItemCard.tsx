@@ -39,12 +39,6 @@ const ItemCard = ({
     OTHER: "Other",
   };
 
-  const statusColors = {
-    AVAILABLE: "bg-lime-400 text-lime-950",
-    SOLD: "bg-neutral-400 text-neutral-950",
-    RESERVED: "bg-amber-400 text-amber-950",
-  };
-
   const currencySymbols = {
     RUPEE: "₹",
     DOLLAR: "$",
