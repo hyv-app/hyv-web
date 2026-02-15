@@ -42,9 +42,9 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex min-h-fit h-[calc(100dvh-12rem)] w-full lg:shadow-lg rounded-lg">
+    <div className="flex min-h-[calc(100dvh-12rem)] w-full lg:shadow-lg lg:rounded-lg">
       {/* Left Side - Decorative Gradient Box with Mosaic Pattern */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden rounded-l-lg border-y border-l">
+      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden lg:rounded-l-lg lg:border-y lg:border-l">
         {/* Mosaic tile pattern */}
         <div className="absolute inset-0 opacity-30 dark:opacity-60">
           <div className="grid grid-cols-6 h-full">
@@ -68,7 +68,7 @@ const LoginPage = () => {
       </div>
 
       {/* Right Side - Login Form */}
-      <div className="flex-1 flex items-center justify-center lg:border-y lg:border-r rounded-r-lg py-16">
+      <div className="flex-1 flex items-center justify-center lg:border-y lg:border-r lg:rounded-r-lg min-h-fit py-4">
         <div className="w-full max-w-md space-y-9">
           {/* Headline */}
           <div className="text-center space-y-3">

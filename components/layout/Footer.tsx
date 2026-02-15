@@ -15,7 +15,7 @@ const Footer = () => {
     // }
 
     return (
-        <div className="sticky z-0 bottom-0 w-full max-w-[1440px] mx-auto h-80 sm:h-96 flex justify-center items-center px-4 pt-4 lg:px-6 lg:pt-6">
+        <div className="sticky z-0 bottom-0 w-full max-w-[1440px] mx-auto h-72 flex justify-center items-center px-4 pt-4 lg:px-6 lg:pt-6">
             <div className="relative overflow-hidden w-full h-full flex justify-end text-right items-start">
                 <div className="flex flex-row space-x-12 sm:space-x-16 md:space-x-24 font-secondary">
                     <ul className="flex flex-col gap-2">
